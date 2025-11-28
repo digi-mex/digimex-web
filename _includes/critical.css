@@ -1,0 +1,70 @@
+/* Critical CSS - Above the fold styles */
+:root {
+    --color-primary-navy: #061F3D;
+    --color-accent-cyan: #3B9AEB;
+    --color-background-light: #fff;
+    --color-text-dark: #374151;
+    --color-whatsapp: #25D366;
+    --color-facebook: #1877F2;
+    --color-youtube: #FF0000;
+    --color-tech-gray: #e5e7eb
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0
+}
+
+.logo-font {
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: -1px
+}
+
+.text-navy {
+    color: var(--color-primary-navy)
+}
+
+.text-cyan {
+    color: var(--color-accent-cyan)
+}
+
+.header-nav {
+    background-color: var(--color-background-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05)
+}
+
+.nav-link-in-plate {
+    color: var(--color-primary-navy) !important;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: .95rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out
+}
+
+.hero-canvas-container {
+    position: relative;
+    background-color: #f8fafc;
+    overflow: hidden;
+    min-height: 400px
+}
+
+#nodeCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: .5
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding-top: 5rem;
+    padding-bottom: 5rem
+}

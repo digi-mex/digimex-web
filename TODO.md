@@ -1,0 +1,7 @@
+- [x] Update _config.yml with site settings
+- [x] Create _data/navigation.yml with menu items
+- [ ] Create assets/css/style.css with extracted styles
+- [ ] Create assets/js/script.js with extracted JS
+- [ ] Create _layouts/default.html with HTML structure
+- [ ] Update index.markdown with main content
+- [ ] Test with jekyll serve

@@ -1,0 +1,24 @@
+{
+  "name": "digimex-web",
+  "version": "1.0.0",
+  "description": "Digimex Website",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css --minify",
+    "build:js": "npx terser assets/js/script.js -o assets/js/script.min.js -c -m",
+    "build": "npm run build:css && npm run build:js",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "imagemin": "^9.0.1",
+    "imagemin-webp": "^8.0.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "terser": "^5.44.1"
+  }
+}
