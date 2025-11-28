@@ -22,7 +22,7 @@ title: </DIGIMEX>
 email: digitalmex@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
   Transforma tu presencia online. Creamos el Diseño Web perfecto y ejecutamos el Marketing Digital ideal (SEO y Google Ads) para atraer clientes y aumentar tus ventas.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/digimex-web" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: digimex
 github_username: digimex
