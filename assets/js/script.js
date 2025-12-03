@@ -170,51 +170,58 @@ if (canvas) {
 // ============================================
 // MANEJO DEL FORMULARIO DE CONTACTO
 // ============================================
+// ============================================
+// MANEJO DEL FORMULARIO DE CONTACTO
+// ============================================
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const submitBtn = document.getElementById('submit-btn');
+    if (!form) return;
 
-    if (form) {
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const data = new FormData(form);
+        const status = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
 
-            // Deshabilitar botón y mostrar estado de carga
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
+        // Basic email validation
+        const email = form.querySelector('input[name="email"]').value;
+        if (!email || !email.includes('@')) {
+            status.innerHTML = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">Error!</strong> <span class="block sm:inline">Por favor ingresa un correo electrónico válido.</span></div>';
+            status.classList.remove('hidden');
+            return;
+        }
 
-            // Obtener datos del formulario
-            const formData = new FormData(form);
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
 
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Éxito
-                    formStatus.className = 'mb-4 p-3 rounded-lg bg-green-100 border border-green-400 text-green-700';
-                    formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i> ¡Gracias! Tu solicitud ha sido enviada correctamente. Te contactaremos pronto.';
-                    formStatus.classList.remove('hidden');
-                    form.reset();
-                } else {
-                    // Error del servidor
-                    throw new Error('Error en el servidor');
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
                 }
-            } catch (error) {
-                // Error de red o del servidor
-                formStatus.className = 'mb-4 p-3 rounded-lg bg-red-100 border border-red-400 text-red-700';
-                formStatus.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i> Hubo un problema al enviar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.';
-                formStatus.classList.remove('hidden');
-            } finally {
-                // Restaurar botón
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Enviar Solicitud';
+            });
+
+            if (response.ok) {
+                status.innerHTML = '<div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">¡Éxito!</strong> <span class="block sm:inline">Tu mensaje ha sido enviado correctamente. Te contactaremos pronto.</span></div>';
+                status.classList.remove('hidden');
+                form.reset();
+            } else {
+                const data = await response.json();
+                if (data.errors) {
+                    status.innerHTML = data.errors.map(error => error.message).join(", ");
+                } else {
+                    status.innerHTML = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">Error!</strong> <span class="block sm:inline">Hubo un problema al enviar el formulario. Por favor intenta de nuevo.</span></div>';
+                }
+                status.classList.remove('hidden');
             }
-        });
-    }
+        } catch (error) {
+            status.innerHTML = '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">Error!</strong> <span class="block sm:inline">Hubo un problema al enviar el formulario. Por favor intenta de nuevo.</span></div>';
+            status.classList.remove('hidden');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Enviar Solicitud';
+        }
+    });
 });
