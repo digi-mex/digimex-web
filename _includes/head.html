@@ -2,6 +2,13 @@
     {% include seo/google-tag-manager.html %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:; frame-src 'self' https://www.google.com https://www.facebook.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+
     <title>{{ site.title }}</title>
     <link rel="icon" type="image/x-icon" href="{{ '/img/digimex.ico' | relative_url }}">
     <meta name="description" content="{{ site.description }}">
@@ -24,9 +31,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <!-- Google Fonts - Deferred -->
     <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Inter:wght@400;600;800&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Roboto+Mono:wght@500;700&family=Inter:wght@400;600&display=swap">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&family=Inter:wght@400;600;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Roboto+Mono:wght@500;700&family=Inter:wght@400;600&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
         <link

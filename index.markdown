@@ -1,235 +1,234 @@
 ---
 layout: default
+title: "Reparación de PC y Laptop"
+description: "Servicio especializado en reparaciones de primer nivel para PC y Laptop en DIGIMEX. Diagnóstico express, cambio de componentes y optimización de sistemas."
+keywords: "reparación de pc, soporte técnico, cambio de display, instalación de sistema, respaldo de información, mantenimiento de laptops, cambio de disco duro, instalación de office"
 ---
 
-<!-- Sección Hero / Introducción (ID cambiada para no colisionar) -->
-<section id="intro-hero" class="hero-canvas-container">
+<!-- HERO BANNER INMERSIVO - ANCHO COMPLETO -->
+<div id="hero-banner" style="position: relative; width: 100%; height: 90vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: flex-start;">
 
-    <!-- CANVAS PARA LA ANIMACIÓN DE NODOS -->
-    <canvas id="nodeCanvas"></canvas>
+    <!-- Imagen de fondo: cubre todo el ancho y alto del banner -->
+    <img src="{{ '/img/repair_hero.png' | relative_url }}"
+         alt="Reparación especializada de PC y Laptop - Digimex"
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0;">
 
-    <!-- CONTENIDO DEL HERO (aseguramos que esté sobre el canvas) -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight text-navy drop-shadow-sm">
-            TRANSFORMA TU NEGOCIO CON <span class="text-cyan logo-font">DIGIMEX</span>
+    <!-- Overlay oscuro para que el texto se lea bien -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(17,24,39,0.88) 40%, rgba(17,24,39,0.35) 100%); z-index: 1;"></div>
+
+    <!-- Contenido del Hero (sobre la imagen) -->
+    <div style="position: relative; z-index: 2; max-width: 750px; padding: 3rem 4rem;">
+        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px; border-radius: 999px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.35); color: #10b981; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem;">
+            <i class="fas fa-check-circle"></i> Especialistas Certificados
+        </span>
+
+        <h1 style="font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; color: #ffffff; line-height: 1.05; margin: 0 0 1.5rem 0; letter-spacing: -0.02em; text-shadow: 0 4px 30px rgba(0,0,0,0.5);">
+            Reparación de<br>
+            <span style="color: #10b981;">PC y Laptop</span>
         </h1>
-        <p class="text-lg sm:text-xl font-light mb-8 sm:mb-10 max-w-4xl mx-auto text-gray-700">
-            Diseño web profesional de alta performance y estrategias de marketing digital que generan resultados reales.
+
+        <p style="font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(255,255,255,0.85); max-width: 520px; line-height: 1.7; margin: 0 0 2.5rem 0; font-weight: 500;">
+            Diagnóstico preciso, resultados duraderos y garantía real. Llevamos tu equipo de vuelta al máximo rendimiento.
         </p>
 
-    </div>
-</section>
-
-<!-- ============================================== -->
-<!-- Sección: DISEÑO WEB (Antes Pilares/Dark)       -->
-<!-- ============================================== -->
-<section id="diseno-web" class="py-16 sm:py-24 diseno-web-bg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-10 sm:mb-14 text-navy">
-            <span class="text-cyan">Diseño Web</span> de Alto Impacto
-        </h2>
-
-        <!-- Grid de Tarjetas -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-            <!-- Tarjeta 1: Performance -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 pilares-icon-box">
-                    <span class="text-3xl sm:text-4xl text-cyan"><i class="fas fa-rocket"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">CÓDIGO Y VELOCIDAD</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Sitios construidos con código moderno para ser ultrarrápidos, optimizando el rendimiento (Core Web Vitals).</p>
-            </div>
-
-            <!-- Tarjeta 2: Diseño Responsivo -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 pilares-icon-box">
-                    <span class="text-3xl sm:text-4xl text-green-500"><i class="fas fa-mobile-alt"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">100% RESPONSIVO</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Diseño que se adapta y funciona perfectamente en cualquier dispositivo: móvil, tablet y escritorio.</p>
-            </div>
-
-            <!-- Tarjeta 3: SEO Técnico -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 pilares-icon-box">
-                    <span class="text-3xl sm:text-4xl text-orange-500"><i class="fas fa-code"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">SEO</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Implementación de estructuras de datos (Schema Markup) para que Google entienda mejor tu contenido y te posicione.</p>
-            </div>
-
-
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/d1g1mex" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 1rem 2rem; background: #1877F2; color: #ffffff; font-weight: 800; font-size: 1.1rem; border-radius: 14px; text-decoration: none; transition: all 0.3s; box-shadow: 0 10px 40px rgba(24,119,242,0.3);">
+                <i class="fab fa-facebook-square"></i> Contactar en Facebook
+            </a>
+            <a href="{{ '/galeria-reparaciones/' | relative_url }}" style="display: inline-flex; align-items: center; gap: 10px; padding: 1rem 2rem; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.3); color: #ffffff; font-weight: 700; font-size: 1rem; border-radius: 14px; text-decoration: none; backdrop-filter: blur(10px); transition: all 0.3s;">
+                Ver Trabajos <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+            </a>
         </div>
     </div>
-</section>
+</div>
 
-<!-- =================================================== -->
-<!-- Nueva Sección: MARKETING DIGITAL (Fondo Oscuro)      -->
-<!-- =================================================== -->
-<section id="marketing-digital" class="py-16 sm:py-24 marketing-digital-bg">
+
+<!-- SECCIÓN: REPARACIONES DE PC Y LAPTOP -->
+<section class="py-16 sm:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-center mb-10 sm:mb-14 text-white">
-            Estrategias de <span class="text-cyan">Marketing Digital</span>
-        </h2>
-
-        <!-- Grid de Tarjetas -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-            <!-- Tarjeta 1: Google Ads & SEM -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 marketing-icon-box">
-                    <span class="text-3xl sm:text-4xl text-red-500"><i class="fab fa-google"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">GOOGLE ADS Y SEM</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Gestión de campañas de búsqueda (Search) y display en Google, optimizando el ROI y la captación de leads.</p>
-            </div>
-
-            <!-- Tarjeta 2: Redes Sociales (Meta Ads) -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 marketing-icon-box">
-                    <span class="text-3xl sm:text-4xl text-blue-600"><i class="fab fa-facebook-f"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">CAMPAÑAS EN META ADS</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Publicidad segmentada y creativa en Facebook e Instagram para aumentar el reconocimiento de marca y ventas.</p>
-            </div>
-
-            <!-- Tarjeta 3: SEO de Contenido -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 marketing-icon-box">
-                    <span class="text-3xl sm:text-4xl text-orange-400"><i class="fas fa-chart-line"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">POSICIONAMIENTO ORGÁNICO</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Estrategias de contenido y palabras clave para mejorar tu ranking de manera natural y sostenible en Google.</p>
-            </div>
-
-            <!-- Tarjeta 4: Google Business Profile (Local) -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 marketing-icon-box">
-                    <span class="text-3xl sm:text-4xl text-green-700"><i class="fas fa-map-marker-alt"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">PRESENCIA LOCAL OPTIMIZADA</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Activación y gestión experta de tu perfil de Google Business para dominar las búsquedas locales (Maps).</p>
-            </div>
-
-            <!-- Tarjeta 5: Analítica Web -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 marketing-icon-box">
-                    <span class="text-3xl sm:text-4xl text-cyan"><i class="fas fa-chart-pie"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">MEDICIÓN Y ANALÍTICA</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Configuración de Google Analytics y Tag Manager para medir el rendimiento exacto de tus campañas y embudos.</p>
-            </div>
-
-            <!-- Tarjeta 6: Contenido Estratégico -->
-            <div class="pilares-card p-6 rounded-xl shadow-float flex flex-col items-center text-center card-animate">
-                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 marketing-icon-box">
-                    <span class="text-3xl sm:text-4xl text-pink-500"><i class="fas fa-lightbulb"></i></span>
-                </div>
-                <h3 class="text-xl font-bold text-navy mb-2 logo-font">CREACIÓN DE CONTENIDO</h3>
-                <p class="text-gray-700 text-sm leading-relaxed">Desarrollo de contenido que atrae, educa y convierte, alineado con las necesidades específicas de tu público objetivo.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Sección de Contacto (Mantengo la estructura mejorada) -->
-<section id="contacto" class="py-16 sm:py-24 bg-gray-50 border-t border-gray-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy mb-4 sm:mb-6">
-            Contáctanos y solicita tu <span class="text-cyan">Asesoría Gratuita</span>
-        </h2>
-        <p class="text-lg text-gray-700 mb-12">
-            Elige la vía de comunicación más cómoda para ti.
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-navy text-center mb-6">
+            Especialistas en <span class="text-cyan">Reparación de PC y Laptop</span>
+        </h1>
+        <p class="text-lg text-gray-700 text-center max-w-4xl mx-auto mb-16">
+            En <span class="text-navy font-bold">DIGIMEX</span> nos enfocamos en brindarte soluciones rápidas y efectivas para tus equipos de cómputo. Nuestro proceso es transparente: realizamos un <strong>diagnóstico preciso</strong>, detectamos la falla y procedemos con el <strong>cambio de componentes</strong> o ajustes necesarios.
         </p>
 
-        <!-- Opciones de Contacto (Grid) -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-center">
-
-            <!-- Tarjeta 1: WhatsApp (Recomendada) -->
-            <div class="contact-card-container">
-                <!-- Icono Sobresaliente -->
-                <div class="contact-icon-top bg-white rounded-full flex items-center justify-center text-white"
-                     style="background-color: var(--color-whatsapp); color: white;">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-
-                <!-- Contenido de la Tarjeta -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl border-4 border-cyan/50 shadow-float pt-16">
-                    <h3 class="text-2xl font-bold text-navy mb-2">
-                        WhatsApp (Recomendado)
-                    </h3>
-                    <p class="text-gray-600 mb-6">
-                        Obtén una respuesta inmediata de nuestro equipo de asesores.
+        <!-- Banner Informativo -->
+        <div class="mb-16 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
+            <div class="flex items-start gap-4">
+                <span class="text-blue-500 text-2xl mt-1"><i class="fas fa-info-circle"></i></span>
+                <div>
+                    <h3 class="text-lg font-bold text-navy mb-1 text-blue-900">Nota Importante</h3>
+                    <p class="text-blue-800 text-sm italic">
+                        Por el momento, nos especializamos exclusivamente en reparaciones de primer nivel (cambio de componentes y software). No realizamos reparaciones electrónicas a nivel componente (micro-soldadura).
                     </p>
-
-                    <p class="text-3xl sm:text-4xl font-extrabold text-navy mb-6 logo-font">
-                        5577530291
-                    </p>
-
-                    <!-- Botón WhatsApp -->
-                    <a href="https://wa.me/525577530291" target="_blank"
-                       class="btn-contact-action whatsapp-btn inline-flex items-center justify-center px-8 py-3 rounded-lg font-bold text-lg text-white w-full">
-                        <i class="fab fa-whatsapp mr-3"></i>
-                        ¡Empezar a Chatear!
-                    </a>
-                </div>
-            </div>
-
-
-            <!-- Tarjeta 2: Correo Electrónico (Formulario) -->
-            <div class="contact-card-container">
-                 <!-- Icono Sobresaliente -->
-                <div class="contact-icon-top bg-white rounded-full flex items-center justify-center text-white"
-                     style="background-color: var(--color-primary-navy); color: white;">
-                    <i class="fas fa-envelope"></i>
-                </div>
-
-                <!-- Contenido de la Tarjeta -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl border-4 border-navy/10 shadow-float pt-16">
-                    <h3 class="text-2xl font-bold text-navy mb-2">
-                        Correo Electrónico
-                    </h3>
-                     <p class="text-gray-600 mb-6">
-                        Déjanos tus datos y te contactaremos en menos de 24 horas.
-                    </p>
-
-                    <!-- Mensaje de Estado del Formulario -->
-                    <div id="form-status" class="mb-4 p-3 rounded-lg hidden"></div>
-
-                    <form id="contact-form" class="space-y-4 text-left" action="https://formspree.io/f/xnnkjzqr" method="POST">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
-                            <input type="text" id="name" name="name" required
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-cyan focus:border-cyan transition duration-150" placeholder="Tu nombre completo">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-cyan focus:border-cyan transition duration-150" placeholder="tusuario@correo.com">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
-                            <textarea id="message" name="message" rows="4" required
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-cyan focus:border-cyan transition duration-150" placeholder="Cuéntanos sobre tu proyecto o consulta..."></textarea>
-                        </div>
-                        
-                        <!-- Campo oculto para identificar el origen -->
-                        <input type="hidden" name="_subject" value="Nueva solicitud de contacto desde DIGIMEX">
-                        
-                        <!-- Botón de Envío -->
-                        <button type="submit" id="submit-btn"
-                            class="btn-contact-action email-btn w-full inline-flex items-center justify-center px-8 py-3 font-bold rounded-lg text-white">
-                            <i class="fas fa-paper-plane mr-2"></i> Enviar Solicitud
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
 
+        <!-- Grid de Servicios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+            <!-- Servicio 1: Pantallas y Estructura -->
+            <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center text-cyan text-3xl mb-6">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3 class="text-xl font-bold text-navy mb-4">Display y Estructura</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan"></i> Cambio de displays</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan"></i> Reparación de bisagras</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan"></i> Reemplazo de carcasas</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 2: Optimización y Hardware -->
+            <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div class="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center text-navy text-3xl mb-6">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 class="text-xl font-bold text-navy mb-4">Hardware y Rendimiento</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-navy"></i> Cambio de discos duros / SSD</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-navy"></i> Ampliación de memoria RAM</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-navy"></i> Cambio de pasta térmica</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 3: Software y Respaldo -->
+            <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                <div class="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-6">
+                    <i class="fas fa-compact-disc"></i>
+                </div>
+                <h3 class="text-xl font-bold text-navy mb-4">Software, Sistemas y Respaldo</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center gap-2 font-bold text-navy"><i class="fas fa-save text-blue-600"></i> Respaldo de información (Backup)</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> Instalación de sistema operativo</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> Instalación de Office</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Opiniones de Clientes (Movidas desde Home anteriormente) -->
+        <div class="mb-24 bg-gray-50 py-16 rounded-3xl border border-gray-100 overflow-hidden px-6 lg:px-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-navy mb-4">Lo que dicen nuestros <span class="text-cyan">Clientes</span></h2>
+                <div class="flex items-center justify-center gap-1 text-yellow-400 text-xl mb-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-500 font-medium italic">"Reparaciones honestas y garantizadas"</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonios -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-cyan/20 rounded-full flex items-center justify-center text-cyan font-bold">M</div>
+                        <h4 class="font-bold text-navy text-sm">Monica S</h4>
+                    </div>
+                    <p class="text-gray-600 text-xs italic leading-relaxed">
+                        "Excelente servicio. Recomiendo por qué es gente honesta..."
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-navy/20 rounded-full flex items-center justify-center text-navy font-bold">A</div>
+                        <h4 class="font-bold text-navy text-sm">Adrián GR GT</h4>
+                    </div>
+                    <p class="text-gray-600 text-xs italic leading-relaxed">
+                        "Muy buena atención, muy profesional te explican que es lo que tiene el equipo..."
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-600 font-bold">H</div>
+                        <h4 class="font-bold text-navy text-sm">Hanoch Michel</h4>
+                    </div>
+                    <p class="text-gray-600 text-xs italic leading-relaxed">
+                        "Muy profesional el servicio,honestidad y calidad. Lo recomiendo al 100%..."
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://www.google.com/search?q=Digitalizaci%C3%B3n-M%C3%A9xico+Opiniones" target="_blank" class="text-xs text-navy font-bold hover:text-cyan transition-colors flex items-center justify-center gap-1">
+                    Ver más testimonios <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Enlace a la Galería -->
+        <div class="mb-24 text-center">
+            <h2 class="text-3xl font-extrabold text-navy mb-6">Galería de <span class="text-cyan">Trabajos de Reparación</span></h2>
+            <a href="{{ '/galeria-reparaciones/' | relative_url }}" class="inline-flex items-center gap-3 bg-cyan text-white font-extrabold px-10 py-4 rounded-xl hover:bg-navy transition-all duration-300 shadow-xl shadow-cyan/20">
+                <i class="fas fa-images text-xl"></i>
+                Ver Galería Completa de Equipos
+            </a>
+        </div>
     </div>
 </section>
 
+<!-- SECCIÓN DE CONTACTO - PREMIUM REDESIGN -->
+<section id="contacto" style="background: linear-gradient(135deg, #111827 0%, #1f2937 100%); padding: 5rem 1.5rem;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+        <span style="display: inline-block; padding: 5px 16px; border-radius: 999px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #10b981; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.2rem;">
+            Atención Personalizada
+        </span>
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #ffffff; margin: 0 0 1rem 0; line-height: 1.2;">
+            ¿Cómo podemos <span style="color: #10b981;">ayudarte?</span>
+        </h2>
+        <p style="color: rgba(255,255,255,0.55); font-size: 1rem; margin: 0 auto 3.5rem auto; max-width: 480px; line-height: 1.7;">
+            Contáctanos a través de Facebook o envíanos un mensaje por correo electrónico.
+        </p>
 
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; text-align: left;">
 
+            <!-- Facebook -->
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div style="width: 56px; height: 56px; background: #1877F2; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                <div>
+                    <h3 style="color: #ffffff; font-size: 1.3rem; font-weight: 700; margin: 0 0 0.5rem 0;">Facebook</h3>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                        Escríbenos en Facebook para diagnósticos y presupuestos. Atención rápida y personalizada.
+                    </p>
+                </div>
+                <a href="https://www.facebook.com/d1g1mex" target="_blank"
+                   style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0.9rem 1.5rem; background: #1877F2; color: #ffffff; font-weight: 700; font-size: 1rem; border-radius: 12px; text-decoration: none; transition: background 0.3s; margin-top: auto;"
+                   onmouseover="this.style.background='#1565c0'" onmouseout="this.style.background='#1877F2'">
+                    <i class="fab fa-facebook-square"></i> Escribir en Facebook
+                </a>
+            </div>
 
+            <!-- Correo Electrónico -->
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2.5rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="width: 56px; height: 56px; background: #10b981; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #ffffff; font-size: 1.3rem; font-weight: 700; margin: 0 0 0.2rem 0;">Correo Electrónico</h3>
+                        <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem; margin: 0;">Te respondemos en menos de 24hrs.</p>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/xnnkjzqr" method="POST" style="display: flex; flex-direction: column; gap: 0.9rem;" id="contact-form">
+                    <input type="text" name="name" placeholder="Tu nombre completo" required
+                           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: white; padding: 0.8rem 1rem; border-radius: 10px; font-size: 0.95rem; outline: none; transition: border 0.3s; width: 100%; box-sizing: border-box;"
+                           onfocus="this.style.border='1px solid #10b981'" onblur="this.style.border='1px solid rgba(255,255,255,0.12)'">
+                    <input type="email" name="email" placeholder="tu@correo.com" required
+                           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: white; padding: 0.8rem 1rem; border-radius: 10px; font-size: 0.95rem; outline: none; transition: border 0.3s; width: 100%; box-sizing: border-box;"
+                           onfocus="this.style.border='1px solid #10b981'" onblur="this.style.border='1px solid rgba(255,255,255,0.12)'">
+                    <textarea name="message" placeholder="¿En qué podemos ayudarte?" rows="3" required
+                              style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: white; padding: 0.8rem 1rem; border-radius: 10px; font-size: 0.95rem; outline: none; transition: border 0.3s; width: 100%; box-sizing: border-box; resize: vertical;"
+                              onfocus="this.style.border='1px solid #10b981'" onblur="this.style.border='1px solid rgba(255,255,255,0.12)'"></textarea>
+                    <button type="submit" id="submit-btn"
+                            style="background: #10b981; color: white; font-weight: 700; font-size: 1rem; padding: 0.9rem 1.5rem; border-radius: 12px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.3s;"
+                            onmouseover="this.style.background='#059669'" onmouseout="this.style.background='#10b981'">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                    <div id="form-status" class="hidden" style="margin-top: 0.5rem;"></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -12,19 +12,29 @@
             <div class="flex justify-between items-center w-full">
 
                 <!-- Logo -->
-                <a href="#" class="text-3xl font-extrabold logo-font text-navy">
-                    <span class="text-cyan">
-                        < /</span> DIGIMEX <span class="text-cyan">></span>
+                <a href="{{ '/' | relative_url }}" class="text-3xl font-extrabold logo-font text-white group">
+                    <span class="text-cyan group-hover:text-white transition-colors duration-300">
+                        < /</span> DIGIMEX <span
+                                class="text-white group-hover:text-cyan transition-colors duration-300">></span>
                 </a>
 
                 <!-- Navegación Desktop (Oculta en móvil) -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden md:flex items-center space-x-6">
 
-                    <!-- ENLACES DE NAVEGACIÓN (Diseño Web, Marketing Digital, Contacto) -->
+                    <!-- Barra de Búsqueda -->
+                    <div class="relative group">
+                        <input type="text" id="site-search" placeholder="¿Qué estás buscando?..."
+                            class="bg-gray-100 border-none rounded-full py-2 px-4 pl-10 text-sm focus:ring-2 focus:ring-cyan focus:bg-white transition-all duration-300 w-48 group-hover:w-64">
+                        <span
+                            class="absolute left-3 top-2.5 text-gray-400 group-focus-within:text-cyan transition-colors">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+
+                    <!-- ENLACES DE NAVEGACIÓN -->
                     <div class="flex space-x-4">
                         {% for item in site.data.navigation %}
-                        <a href="{% if page.url == '/' %}{{ item.url }}{% else %}{{ '/' | relative_url }}{{ item.url }}{% endif %}"
-                            class="nav-link-in-plate">{{ item.title }}</a>
+                        <a href="{{ item.url | relative_url }}" class="nav-link-in-plate">{{ item.title }}</a>
                         {% endfor %}
                     </div>
 
@@ -34,16 +44,13 @@
                     <!-- Botones Sociales con Colores de Marca -->
                     <div class="flex items-center space-x-3">
                         <a href="https://www.facebook.com/d1g1mex?locale=es_LA" target="_blank"
-                            class="btn-social-nav-color facebook" title="Visita nuestro Facebook">
+                            style="color: #1877F2; font-size: 1.5rem;" title="Visita nuestro Facebook">
                             <i class="fab fa-facebook-square"></i>
                         </a>
                         <a href="https://www.youtube.com/@digitalizaci0nm3xic0" target="_blank"
-                            class="btn-social-nav-color youtube" title="Visita nuestro canal de YouTube">
+                            style="color: #FF0000; font-size: 1.5rem;" title="Visita nuestro canal de YouTube">
                             <i class="fab fa-youtube-square"></i>
                         </a>
-                        <a href="https://wa.me/525577530291" target="_blank" class="btn-social-nav-color whatsapp"
-                            title="Contáctanos por WhatsApp">
-                            <i class="fab fa-whatsapp-square"></i>
                     </div>
                 </div>
 
@@ -62,28 +69,20 @@
                 <div class="flex flex-col space-y-2 p-4">
                     <!-- Enlaces Móviles Actualizados -->
                     {% for item in site.data.navigation %}
-                    <a href="{% if page.url == '/' %}{{ item.url }}{% else %}{{ '/' | relative_url }}{{ item.url }}{% endif %}"
-                        class="nav-link-in-plate w-full text-center py-2"
+                    <a href="{{ item.url | relative_url }}" class="nav-link-in-plate w-full text-center py-2"
                         style="color: var(--color-primary-navy); background-color: var(--color-tech-gray);"
                         onclick="toggleMenu()">{{ item.title }}</a>
                     {% endfor %}
 
                     <div class="pt-2 border-t border-gray-200 flex justify-center space-x-4">
-                        <!-- Enlaces Sociales Móvil (con colores) -->
+                        <!-- Solo Facebook en móvil -->
                         <a href="https://www.facebook.com/d1g1mex?locale=es_LA" target="_blank"
-                            class="text-2xl text-navy hover:text-cyan transition duration-150"
-                            title="Visita nuestro Facebook" style="color: var(--color-facebook);">
+                            style="color: #1877F2; font-size: 1.5rem;" title="Visita nuestro Facebook">
                             <i class="fab fa-facebook-square"></i>
                         </a>
                         <a href="https://www.youtube.com/@digitalizaci0nm3xic0" target="_blank"
-                            class="text-2xl text-navy hover:text-cyan transition duration-150"
-                            title="Visita nuestro canal de YouTube" style="color: var(--color-youtube);">
+                            style="color: #FF0000; font-size: 1.5rem;" title="YouTube">
                             <i class="fab fa-youtube-square"></i>
-                        </a>
-                        <a href="https://wa.me/525577530291" target="_blank"
-                            class="text-2xl text-navy hover:text-cyan transition duration-150" title="WhatsApp"
-                            style="color: var(--color-whatsapp);">
-                            <i class="fab fa-whatsapp-square"></i>
                         </a>
                     </div>
                 </div>
@@ -116,10 +115,10 @@
                         style="color: var(--color-youtube);">
                         <i class="fab fa-youtube-square"></i>
                     </a>
-                    <a href="https://wa.me/525577530291" target="_blank"
-                        class="text-2xl text-navy hover:text-cyan transition duration-150" title="WhatsApp"
-                        style="color: var(--color-whatsapp);">
-                        <i class="fab fa-whatsapp-square"></i>
+                    <a href="https://m.me/d1g1mex" target="_blank"
+                        class="text-2xl text-navy hover:text-cyan transition duration-150" title="Messenger"
+                        style="color: var(--color-facebook);">
+                        <i class="fab fa-facebook-messenger"></i>
                     </a>
                 </div>
 
@@ -131,6 +130,7 @@
         </div>
     </footer>
 
+    {% include cookie-banner.html %}
     <script src="{{ '/assets/js/script.min.js' | relative_url }}" defer></script>
 </body>
 
