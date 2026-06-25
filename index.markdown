@@ -44,7 +44,7 @@ keywords: "reparación de pc, soporte técnico, cambio de display, instalación 
 
 
 <!-- SECCIÓN: REPARACIONES DE PC Y LAPTOP -->
-<section class="py-16 sm:py-24 bg-white">
+<section id="reparaciones" class="py-16 sm:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="text-4xl sm:text-5xl font-extrabold text-navy text-center mb-6">
             Especialistas en <span class="text-cyan">Reparación de PC y Laptop</span>

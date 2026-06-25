@@ -1,0 +1,67 @@
+- title: "Mantenimiento Preventivo"
+  description: "Limpieza a fondo de componentes internos para mejorar el flujo de aire y evitar sobrecalentamiento."
+  image: "/img/reparaciones/img_reparaciones_pc/1.webp"
+
+- title: "Cambio de Pasta Térmica"
+  description: "Aplicación de pasta térmica de alta calidad para optimizar las temperaturas del procesador."
+  image: "/img/reparaciones/img_reparaciones_pc/2.webp"
+
+- title: "Instalación de Unidad SSD"
+  description: "Actualización a almacenamiento de estado sólido para mejorar dramáticamente la velocidad del sistema."
+  image: "/img/reparaciones/img_reparaciones_pc/3.webp"
+
+- title: "Limpieza Interna de Laptop"
+  description: "Eliminación de polvo en ventilador y disipadores para asegurar un funcionamiento silencioso."
+  image: "/img/reparaciones/img_reparaciones_pc/4.webp"
+
+- title: "Diagnóstico de Hardware"
+  description: "Pruebas detalladas para identificar fallas en componentes y asegurar un funcionamiento óptimo."
+  image: "/img/reparaciones/img_reparaciones_pc/5.webp"
+
+- title: "Reparación de Bisagras"
+  description: "Reconstrucción y ajuste de bisagras de laptop dañadas o desgastadas."
+  image: "/img/reparaciones/img_reparaciones_pc/6.webp"
+
+- title: "Optimización de Sistema"
+  description: "Configuración y limpieza de software para acelerar el arranque y desempeño del equipo."
+  image: "/img/reparaciones/img_reparaciones_pc/7.webp"
+
+- title: "Cambio de Memoria RAM"
+  description: "Ampliación de memoria para permitir multitarea fluida y mejor rendimiento en aplicaciones exigentes."
+  image: "/img/reparaciones/img_reparaciones_pc/8.webp"
+
+- title: "Ensamble Personalizado"
+  description: "Montaje y organización de cables en equipos de escritorio de alto rendimiento."
+  image: "/img/reparaciones/img_reparaciones_pc/9.webp"
+
+- title: "Reemplazo de Teclado"
+  description: "Cambio de teclados dañados o con teclas inactivas por repuestos nuevos."
+  image: "/img/reparaciones/img_reparaciones_pc/10.webp"
+
+- title: "Mantenimiento de Disipación"
+  description: "Limpieza profunda de los ductos de ventilación y lubricación de ventiladores."
+  image: "/img/reparaciones/img_reparaciones_pc/11.webp"
+
+- title: "Reemplazo de Pantalla"
+  description: "Instalación de nuevas pantallas de repuesto para laptops con displays rotos o con fallas."
+  image: "/img/reparaciones/img_reparaciones_pc/12.webp"
+
+- title: "Respaldo e Integridad de Datos"
+  description: "Respaldo seguro de datos personales y archivos de trabajo antes de realizar intervenciones mayores."
+  image: "/img/reparaciones/img_reparaciones_pc/13.webp"
+
+- title: "Revisión de Fuente de Poder"
+  description: "Diagnóstico y cambio de fuentes de alimentación defectuosas en computadoras de escritorio."
+  image: "/img/reparaciones/img_reparaciones_pc/14.webp"
+
+- title: "Actualización de Componentes"
+  description: "Renovación de procesadores, tarjetas gráficas y componentes principales."
+  image: "/img/reparaciones/img_reparaciones_pc/15.webp"
+
+- title: "Configuración de BIOS/UEFI"
+  description: "Ajustes avanzados a nivel firmware para compatibilidad y estabilidad óptima del hardware."
+  image: "/img/reparaciones/img_reparaciones_pc/16.webp"
+
+- title: "Limpieza de Tarjeta Madre"
+  description: "Remoción de impurezas y sulfato en placas de circuito mediante productos especializados."
+  image: "/img/reparaciones/img_reparaciones_pc/17.webp"

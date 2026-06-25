@@ -2,6 +2,7 @@
 layout: default
 title: "Blog"
 description: "Noticias, consejos y tendencias sobre diseño web y marketing digital de la mano de DIGIMEX."
+permalink: /blog/
 ---
 
 <section class="py-16 sm:py-24 bg-gray-50">

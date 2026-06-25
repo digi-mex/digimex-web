@@ -225,3 +225,152 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// ============================================
+// SISTEMA DE BÚSQUEDA DEL SITIO (CLIENT-SIDE)
+// ============================================
+const SEARCH_DATABASE = [
+    {
+        title: "Reparación de Laptop y PC",
+        description: "Servicio de diagnóstico express y cambio de componentes para laptops y computadoras.",
+        url: "/#reparaciones",
+        keywords: "reparacion laptop pc computadoras bisagras pantallas teclado mantenimiento"
+    },
+    {
+        title: "Mantenimiento Preventivo",
+        description: "Limpieza interna profunda, ventiladores y cambio de pasta térmica para evitar sobrecalentamiento.",
+        url: "/#reparaciones",
+        keywords: "mantenimiento limpieza pasta termica calentamiento ventilador lento mantenimineto"
+    },
+    {
+        title: "Display y Estructura (Pantallas)",
+        description: "Reemplazo de pantallas rotas, reparación de bisagras y cambio de carcasas.",
+        url: "/#reparaciones",
+        keywords: "display pantalla bisagra bisagras carcasa display roto rota"
+    },
+    {
+        title: "Sistemas y Software (Windows/Office)",
+        description: "Instalación de sistema operativo Windows, paquetería Office y software esencial.",
+        url: "/#reparaciones",
+        keywords: "sistema operativo windows office software programas formatear"
+    },
+    {
+        title: "Respaldo e Integridad de Datos (Backup)",
+        description: "Respaldo y recuperación de información y archivos de discos duros o SSD.",
+        url: "/#reparaciones",
+        keywords: "respaldo backup datos archivos disco duro recuperar recuperacion"
+    },
+    {
+        title: "Diseño Web Performance",
+        description: "Creación de sitios web rápidos, responsivos y modernos enfocados en convertir visitas en ventas.",
+        url: "/servicios-digitales/#diseno-web",
+        keywords: "diseño web paginas internet landing page ecommerce tienda en linea"
+    },
+    {
+        title: "Google Ads & SEM",
+        description: "Campañas publicitarias inteligentes para posicionarte en los primeros resultados de Google.",
+        url: "/servicios-digitales/#google-ads",
+        keywords: "google ads anuncios publicidad sem marketing digital google analytics"
+    },
+    {
+        title: "Meta Ads (Facebook e Instagram)",
+        description: "Estrategias de publicidad segmentada en redes sociales para captar clientes potenciales.",
+        url: "/servicios-digitales/#meta-ads",
+        keywords: "facebook instagram meta ads publicidad redes sociales anuncios"
+    },
+    {
+        title: "Portafolio de Proyectos",
+        description: "Conoce nuestros casos de éxito y proyectos web completados.",
+        url: "/portafolio-diseno/",
+        keywords: "portafolio proyectos diseno web trabajos completados"
+    },
+    {
+        title: "Proyecto: Ecología Industrial",
+        description: "Sitio web interactivo enfocado en soluciones sostenibles y optimización industrial.",
+        url: "/portafolio-diseno/",
+        keywords: "ecologia industrial netlify sustentabilidad"
+    },
+    {
+        title: "Galería de Equipos Reparados",
+        description: "Fotos de nuestros trabajos y éxitos en mantenimiento de hardware.",
+        url: "/galeria-reparaciones/",
+        keywords: "galeria fotos imagenes laptop pc mantenimiento"
+    },
+    {
+        title: "Contacto y Ubicación",
+        description: "Ponte en contacto con nuestro soporte técnico y área digital.",
+        url: "/#contacto",
+        keywords: "contacto cotizar cotizacion messenger facebook correo"
+    },
+    {
+        title: "Blog de Tecnología",
+        description: "Artículos, consejos y tendencias sobre diseño web, SEO y tecnología.",
+        url: "/blog/",
+        keywords: "blog articulos jekyll noticias marketing consejos"
+    }
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('site-search');
+    const resultsContainer = document.getElementById('search-results');
+    if (!searchInput || !resultsContainer) return;
+
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase().trim();
+        if (!query) {
+            resultsContainer.innerHTML = '';
+            resultsContainer.classList.add('hidden');
+            return;
+        }
+
+        const filtered = SEARCH_DATABASE.filter(item => {
+            return item.title.toLowerCase().includes(query) ||
+                   item.description.toLowerCase().includes(query) ||
+                   item.keywords.toLowerCase().includes(query);
+        });
+
+        if (filtered.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="p-4 text-sm text-gray-500 text-center">
+                    No se encontraron resultados para "${escapeHTML(query)}"
+                </div>`;
+        } else {
+            const baseurl = window.siteBaseUrl || '/digimex-web';
+            resultsContainer.innerHTML = filtered.map(item => {
+                const fullUrl = item.url.startsWith('/') ? `${baseurl}${item.url}` : item.url;
+                return `
+                    <a href="${fullUrl}" class="block p-4 hover:bg-gray-50 border-b border-gray-100 last:border-none transition duration-150 no-underline text-left">
+                        <div class="font-bold text-navy text-sm hover:text-cyan transition-colors">${escapeHTML(item.title)}</div>
+                        <div class="text-xs text-gray-500 mt-1 line-clamp-2">${escapeHTML(item.description)}</div>
+                    </a>`;
+            }).join('');
+        }
+        resultsContainer.classList.remove('hidden');
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+            resultsContainer.classList.add('hidden');
+        }
+    });
+
+    // Re-show dropdown on focus if input has value
+    searchInput.addEventListener('focus', function() {
+        if (searchInput.value.trim()) {
+            resultsContainer.classList.remove('hidden');
+        }
+    });
+});
+
+function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+        tag => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        }[tag] || tag)
+    );
+}

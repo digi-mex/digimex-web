@@ -24,17 +24,20 @@
                     <!-- Barra de Búsqueda -->
                     <div class="relative group">
                         <input type="text" id="site-search" placeholder="¿Qué estás buscando?..."
-                            class="bg-gray-100 border-none rounded-full py-2 px-4 pl-10 text-sm focus:ring-2 focus:ring-cyan focus:bg-white transition-all duration-300 w-48 group-hover:w-64">
+                            class="bg-gray-100 border-none rounded-full py-2 px-4 pl-10 text-sm focus:ring-2 focus:ring-cyan focus:bg-white transition-all duration-300 w-48 group-hover:w-64"
+                            autocomplete="off">
                         <span
                             class="absolute left-3 top-2.5 text-gray-400 group-focus-within:text-cyan transition-colors">
                             <i class="fas fa-search"></i>
                         </span>
+                        <!-- Dropdown de resultados de búsqueda -->
+                        <div id="search-results" class="absolute left-0 mt-2 bg-white border border-gray-200 rounded-2xl shadow-2xl max-h-96 overflow-y-auto hidden z-[100] w-64 md:w-80"></div>
                     </div>
 
                     <!-- ENLACES DE NAVEGACIÓN -->
                     <div class="flex space-x-4">
                         {% for item in site.data.navigation %}
-                        <a href="{{ item.url | relative_url }}" class="nav-link-in-plate">{{ item.title }}</a>
+                        <a href="{{ item.url | relative_url }}" class="nav-link-in-plate whitespace-nowrap">{{ item.title }}</a>
                         {% endfor %}
                     </div>
 
@@ -131,7 +134,8 @@
     </footer>
 
     {% include cookie-banner.html %}
-    <script src="{{ '/assets/js/script.min.js' | relative_url }}" defer></script>
+    <script>window.siteBaseUrl = "{{ '' | relative_url }}";</script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
 </body>
 
 </html>

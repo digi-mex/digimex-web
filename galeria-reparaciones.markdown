@@ -2,6 +2,7 @@
 layout: default
 title: "Galería de Equipos Reparados"
 description: "Visualiza nuestros trabajos de reparación de laptops y PC. Proceso de diagnóstico y solución rápida en DIGIMEX."
+permalink: /galeria-reparaciones/
 ---
 
 <section class="py-16 sm:py-24 bg-white">
@@ -14,42 +15,21 @@ description: "Visualiza nuestros trabajos de reparación de laptops y PC. Proces
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Item 1 -->
+            {% for item in site.data.reparaciones %}
             <div class="flex flex-col gap-4">
-                <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-xl">
-                    <img src="{{ '/img/reparaciones/pc_repair_1.png' | relative_url }}" alt="Mantenimiento preventivo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-xl bg-gray-100">
+                    <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-navy">Mantenimiento Interno</h3>
-                    <p class="text-gray-600 text-sm">Limpieza profunda y cambio de pasta térmica para optimizar la temperatura.</p>
+                    <h3 class="text-xl font-bold text-navy">{{ item.title }}</h3>
+                    <p class="text-gray-600 text-sm">{{ item.description }}</p>
                 </div>
             </div>
-
-            <!-- Item 2 -->
-            <div class="flex flex-col gap-4">
-                <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-xl">
-                    <img src="{{ '/img/reparaciones/pc_repair_2.png' | relative_url }}" alt="Cambio de disco" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-navy">Upgrade de Hardware</h3>
-                    <p class="text-gray-600 text-sm">Instalación de discos SSD y aumento de RAM para máxima velocidad.</p>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="flex flex-col gap-4">
-                <div class="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-xl">
-                    <img src="{{ '/img/reparaciones/pc_repair_3.png' | relative_url }}" alt="Diagnóstico avanzado" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-navy">Diagnóstico y Pruebas</h3>
-                    <p class="text-gray-600 text-sm">Pruebas de estrés y estabilidad para asegurar el funcionamiento óptimo.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
         <div class="mt-20 text-center">
-            <a href="{{ '/reparaciones-de-pc/' | relative_url }}" class="text-navy font-bold hover:text-cyan transition-colors flex items-center justify-center gap-2">
+            <a href="{{ '/' | relative_url }}" class="text-navy font-bold hover:text-cyan transition-colors flex items-center justify-center gap-2">
                 <i class="fas fa-arrow-left"></i> Volver a Servicios de Reparación
             </a>
         </div>
