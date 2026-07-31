@@ -27,6 +27,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: digimex
 github_username: digimex
 
+# Colección de trabajos de reparación para la galería
+# Los items se consumen vía {{ site.trabajos }} (no generan páginas propias).
+collections:
+  trabajos:
+    output: false
+
 # Build settings
 theme: minima
 plugins:

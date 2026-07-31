@@ -11,7 +11,22 @@ module.exports = {
         extend: {
             colors: {
                 navy: '#0a192f',
-                cyan: '#64ffda',
+                // Escala completa de cyan (sin ella, las clases cyan-400/500
+                // no se compilan y los acentos quedan sin color).
+                cyan: {
+                    DEFAULT: '#22d3ee',
+                    50: '#ecfeff',
+                    100: '#cffafe',
+                    200: '#a5f3fc',
+                    300: '#67e8f9',
+                    400: '#22d3ee',
+                    500: '#06b6d4',
+                    600: '#0891b2',
+                    700: '#0e7490',
+                    800: '#155e75',
+                    900: '#164e63',
+                    950: '#083344',
+                },
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

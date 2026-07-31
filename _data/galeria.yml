@@ -1,0 +1,12 @@
+# Categorías de la galería de trabajos.
+# El campo `slug` se usa en el front matter de _trabajos/*.md (campo `categoria`).
+categorias:
+  - slug: "mantenimiento"
+    label: "Mantenimiento"
+    icono: "fa-screwdriver-wrench"
+  - slug: "pantallas-bisagras"
+    label: "Pantallas & Bisagras"
+    icono: "fa-laptop"
+  - slug: "upgrades-ssd-ram"
+    label: "Upgrades SSD/RAM"
+    icono: "fa-microchip"

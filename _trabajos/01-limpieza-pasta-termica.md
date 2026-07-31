@@ -1,0 +1,21 @@
+﻿---
+title: "Limpieza Profunda + Pasta Térmica"
+categoria: "mantenimiento"
+cliente: "Dell Inspiron 15"
+imagen_despues: "/img/reparaciones/img_reparaciones_pc/1.webp"
+imagen_antes: ""
+descripcion: "Desarme completo, limpieza de ventilador y disipadores, y cambio de pasta térmica de alta calidad para eliminar el sobrecalentamiento."
+metricas:
+  - label: "Temp. CPU"
+    icono: "fa-temperature-high"
+    antes: "98°C"
+    despues: "62°C"
+  - label: "Arranque"
+    icono: "fa-bolt"
+    antes: "1m 40s"
+    despues: "35s"
+  - label: "Ruido ventilador"
+    icono: "fa-volume-high"
+    antes: "Alto"
+    despues: "Silencioso"
+---

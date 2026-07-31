@@ -1,0 +1,47 @@
+# Catálogo de licencias de Microsoft Office.
+# `destaque: true` resalta el producto más vendido en la página.
+licencias:
+  - nombre: "Microsoft 365 Personal"
+    tipo: "Suscripción anual"
+    icono: "fa-user"
+    destaque: false
+    descripcion: "Office completo para 1 persona, siempre actualizado."
+    caracteristicas:
+      - "Word, Excel, PowerPoint y Outlook"
+      - "1 TB de espacio en OneDrive"
+      - "Copilot IA incluido en Office"
+      - "Renovable cada año"
+    nota: "Usuarios: 1"
+  - nombre: "Microsoft 365 Familia"
+    tipo: "Suscripción anual"
+    icono: "fa-users"
+    destaque: true
+    descripcion: "Para toda la familia, hasta 6 personas."
+    caracteristicas:
+      - "Todo lo de Personal, para 6 usuarios"
+      - "6 TB en OneDrive (1 TB por persona)"
+      - "Copilot IA incluido en Office"
+      - "Apps de escritorio y móviles"
+    nota: "Usuarios: hasta 6"
+  - nombre: "Office 2024 Hogar"
+    tipo: "Pago único"
+    icono: "fa-file-word"
+    destaque: false
+    descripcion: "Licencia perpetua de pago único, sin renovaciones."
+    caracteristicas:
+      - "Word, Excel y PowerPoint"
+      - "Licencia perpetua para 1 PC o Mac"
+      - "Instalación y activación incluidas"
+      - "Sin renovaciones anuales"
+    nota: "Dispositivos: 1"
+  - nombre: "Office 2024 Hogar y Empresas"
+    tipo: "Pago único"
+    icono: "fa-briefcase"
+    destaque: false
+    descripcion: "Licencia perpetua con Outlook y uso comercial."
+    caracteristicas:
+      - "Word, Excel, PowerPoint y Outlook"
+      - "Uso comercial permitido"
+      - "Licencia perpetua para 1 PC o Mac"
+      - "Instalación y activación incluidas"
+    nota: "Dispositivos: 1"

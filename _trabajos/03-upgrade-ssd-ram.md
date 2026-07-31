@@ -1,0 +1,21 @@
+﻿---
+title: "Upgrade SSD + RAM"
+categoria: "upgrades-ssd-ram"
+cliente: "Lenovo ThinkPad E14"
+imagen_despues: "/img/reparaciones/img_reparaciones_pc/3.webp"
+imagen_antes: ""
+descripcion: "Instalación de SSD NVMe de 512GB y ampliación de memoria RAM a 16GB. El equipo quedó prácticamente nuevo."
+metricas:
+  - label: "Arranque"
+    icono: "fa-bolt"
+    antes: "2m 15s"
+    despues: "21s"
+  - label: "Memoria RAM"
+    icono: "fa-memory"
+    antes: "8 GB"
+    despues: "16 GB"
+  - label: "Almacenamiento"
+    icono: "fa-hard-drive"
+    antes: "HDD 1TB"
+    despues: "SSD 512GB"
+---

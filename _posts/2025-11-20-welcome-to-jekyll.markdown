@@ -1,29 +1,19 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Bienvenidos al nuevo sitio de DIGIMEX"
 date:   2025-11-20 21:50:47 -0600
-categories: jekyll update
+categories: digimex
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+¡Bienvenidos! En DIGIMEX estamos muy contentos de presentar nuestro nuevo sitio web.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Aquí encontrarás todo lo que hacemos:
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+- **Reparación de PC y laptop a nivel componente**: diagnóstico preciso y reparaciones de equipo para que tu computadora vuelva al máximo rendimiento. Explora nuestra [galería de servicios](/galeria-reparaciones/).
+- **Licencias de Microsoft Office**: Microsoft 365 y Office 2024, 100% originales, con instalación incluida y soporte. [Cótizalas aquí](/licencias-office/).
+- **Diseño de landing pages**: creamos páginas de venta conectadas con Google Analytics, Google Search Console, Facebook, correo, WhatsApp y Google Business Profile. [Conoce el servicio](/servicios-digitales/).
+- **Portafolio**: revisa los [proyectos web que ya hemos realizado](/portafolio-diseno/).
 
-Jekyll also offers powerful support for code snippets:
+Este espacio será también nuestro blog: aquí compartiremos consejos de tecnología, mantenimiento de equipos y buenas prácticas para hacer crecer tu negocio en internet.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Gracias por visitarnos. Si necesitas ayuda con tu equipo o con tu presencia digital, [escríbenos por Messenger](https://m.me/d1g1mex) y con gusto te atendemos.

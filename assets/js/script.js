@@ -261,22 +261,28 @@ const SEARCH_DATABASE = [
         keywords: "respaldo backup datos archivos disco duro recuperar recuperacion"
     },
     {
-        title: "Diseño Web Performance",
-        description: "Creación de sitios web rápidos, responsivos y modernos enfocados en convertir visitas en ventas.",
+        title: "Landing Pages (Diseño Web)",
+        description: "Creación de landing pages conectadas con Google Analytics, Search Console, Facebook, correo, WhatsApp y Google Business Profile.",
         url: "/servicios-digitales/#diseno-web",
-        keywords: "diseño web paginas internet landing page ecommerce tienda en linea"
+        keywords: "landing page diseño web paginas internet sitio web pagina de venta"
     },
     {
-        title: "Google Ads & SEM",
-        description: "Campañas publicitarias inteligentes para posicionarte en los primeros resultados de Google.",
+        title: "Google Business Profile",
+        description: "Configuración del perfil de negocio en Google con nombre, información básica y hasta 5 artículos o productos.",
+        url: "/servicios-digitales/#diseno-web",
+        keywords: "google business profile google maps negocio perfil"
+    },
+    {
+        title: "Google Ads (Seguimiento y administración)",
+        description: "Seguimiento y administración de campañas de Google Ads como parte del paquete completo.",
         url: "/servicios-digitales/#google-ads",
         keywords: "google ads anuncios publicidad sem marketing digital google analytics"
     },
     {
-        title: "Meta Ads (Facebook e Instagram)",
-        description: "Estrategias de publicidad segmentada en redes sociales para captar clientes potenciales.",
-        url: "/servicios-digitales/#meta-ads",
-        keywords: "facebook instagram meta ads publicidad redes sociales anuncios"
+        title: "Vinculación con WhatsApp",
+        description: "Botones y enlaces de WhatsApp integrados en tu landing page para contacto directo.",
+        url: "/servicios-digitales/#diseno-web",
+        keywords: "whatsapp vinculo boton mensaje contacto"
     },
     {
         title: "Portafolio de Proyectos",
@@ -295,6 +301,12 @@ const SEARCH_DATABASE = [
         description: "Fotos de nuestros trabajos y éxitos en mantenimiento de hardware.",
         url: "/galeria-reparaciones/",
         keywords: "galeria fotos imagenes laptop pc mantenimiento"
+    },
+    {
+        title: "Licencias de Microsoft Office",
+        description: "Microsoft 365 y Office 2024, licencias originales con entrega por correo e instalación incluida.",
+        url: "/licencias-office/",
+        keywords: "licencia office microsoft 365 office 2024 comprar licencia activacion word excel"
     },
     {
         title: "Contacto y Ubicación",

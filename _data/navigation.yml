@@ -1,10 +1,29 @@
-- title: "Reparación PC y Laptop"
+# Menú de navegación principal.
+# Campos: title (texto), url (destino), icono (clase FontAwesome), boton (true = CTA destacado).
+# Un item con `dropdown: true` agrupa a sus `items` en un submenú desplegable.
+- title: "Inicio"
   url: "/"
-- title: "Soluciones Digitales"
-  url: "/servicios-digitales/"
-- title: "Portafolio"
-  url: "/portafolio-diseno/"
+  icono: "fa-house"
+- title: "Servicios"
+  icono: "fa-screwdriver-wrench"
+  dropdown: true
+  items:
+    - title: "Reparaciones"
+      url: "/galeria-reparaciones/"
+      icono: "fa-screwdriver-wrench"
+    - title: "Licencias Office"
+      url: "/licencias-office/"
+      icono: "fa-cube"
+    - title: "Landing Pages"
+      url: "/servicios-digitales/"
+      icono: "fa-rocket"
+    - title: "Portafolio"
+      url: "/portafolio-diseno/"
+      icono: "fa-folder-open"
 - title: "Blog"
   url: "/blog/"
+  icono: "fa-newspaper"
 - title: "Contacto"
   url: "#contacto"
+  icono: "fa-comments"
+  boton: true

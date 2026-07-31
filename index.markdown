@@ -1,231 +1,287 @@
 ---
 layout: default
-title: "Reparación de PC y Laptop"
-description: "Servicio especializado en reparaciones de primer nivel para PC y Laptop en DIGIMEX. Diagnóstico express, cambio de componentes y optimización de sistemas."
-keywords: "reparación de pc, soporte técnico, cambio de display, instalación de sistema, respaldo de información, mantenimiento de laptops, cambio de disco duro, instalación de office"
+title: "Reparación de PC y Laptop a Nivel Componente"
+description: "DIGIMEX: reparación especializada de computadoras y laptops a nivel componente, mantenimiento, upgrades de hardware, software y respaldo de información."
+keywords: "reparación de pc, soporte técnico, reparación a nivel componente, cambio de display, mantenimiento de laptops, cambio de disco duro, instalación de office, diseño web"
 ---
 
-<!-- HERO BANNER INMERSIVO - ANCHO COMPLETO -->
-<div id="hero-banner" style="position: relative; width: 100%; height: 90vh; min-height: 500px; overflow: hidden; display: flex; align-items: center; justify-content: flex-start;">
+<!-- ============================================================
+     HERO — BANNER DE ANCHO COMPLETO
+     ============================================================ -->
+<section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50/70">
+    <div class="absolute -top-32 -right-24 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[130px] pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute -bottom-40 -left-24 w-[450px] h-[450px] bg-cyan-100/50 rounded-full blur-[130px] pointer-events-none" aria-hidden="true"></div>
 
-    <!-- Imagen de fondo: cubre todo el ancho y alto del banner -->
-    <img src="{{ '/img/repair_hero.png' | relative_url }}"
-         alt="Reparación especializada de PC y Laptop - Digimex"
-         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0;">
-
-    <!-- Overlay oscuro para que el texto se lea bien -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(17,24,39,0.88) 40%, rgba(17,24,39,0.35) 100%); z-index: 1;"></div>
-
-    <!-- Contenido del Hero (sobre la imagen) -->
-    <div style="position: relative; z-index: 2; max-width: 750px; padding: 3rem 4rem;">
-        <span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 18px; border-radius: 999px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.35); color: #10b981; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem;">
-            <i class="fas fa-check-circle"></i> Especialistas Certificados
-        </span>
-
-        <h1 style="font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 900; color: #ffffff; line-height: 1.05; margin: 0 0 1.5rem 0; letter-spacing: -0.02em; text-shadow: 0 4px 30px rgba(0,0,0,0.5);">
-            Reparación de<br>
-            <span style="color: #10b981;">PC y Laptop</span>
-        </h1>
-
-        <p style="font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(255,255,255,0.85); max-width: 520px; line-height: 1.7; margin: 0 0 2.5rem 0; font-weight: 500;">
-            Diagnóstico preciso, resultados duraderos y garantía real. Llevamos tu equipo de vuelta al máximo rendimiento.
-        </p>
-
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="https://www.facebook.com/d1g1mex" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 1rem 2rem; background: #1877F2; color: #ffffff; font-weight: 800; font-size: 1.1rem; border-radius: 14px; text-decoration: none; transition: all 0.3s; box-shadow: 0 10px 40px rgba(24,119,242,0.3);">
-                <i class="fab fa-facebook-square"></i> Contactar en Facebook
-            </a>
-            <a href="{{ '/galeria-reparaciones/' | relative_url }}" style="display: inline-flex; align-items: center; gap: 10px; padding: 1rem 2rem; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.3); color: #ffffff; font-weight: 700; font-size: 1rem; border-radius: 14px; text-decoration: none; backdrop-filter: blur(10px); transition: all 0.3s;">
-                Ver Trabajos <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
-            </a>
+    <!-- Banner de imagen (Desktop): ocupa todo el lado derecho de borde a borde -->
+    <div class="hidden lg:block absolute inset-y-0 right-0 w-[52%]">
+        <img src="{{ '/img/repair_hero.png' | relative_url }}" alt="Reparación de PC y Laptop a nivel componente"
+             class="w-full h-full object-cover" loading="eager">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-50 via-white/40 to-transparent" aria-hidden="true"></div>
+        <div class="absolute bottom-8 left-8 bg-white rounded-2xl shadow-xl shadow-blue-100 border border-blue-100 px-5 py-3.5 flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
+                <i class="fas fa-screwdriver-wrench"></i>
+            </span>
+            <div>
+                <p class="text-sm font-bold text-slate-900">Servicio Especializado</p>
+                <p class="text-xs text-gray-500">Cuidamos tu equipo</p>
+            </div>
         </div>
     </div>
-</div>
 
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 lg:min-h-[80vh] grid lg:grid-cols-2 gap-12 items-center">
 
-<!-- SECCIÓN: REPARACIONES DE PC Y LAPTOP -->
-<section id="reparaciones" class="py-16 sm:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-navy text-center mb-6">
-            Especialistas en <span class="text-cyan">Reparación de PC y Laptop</span>
-        </h1>
-        <p class="text-lg text-gray-700 text-center max-w-4xl mx-auto mb-16">
-            En <span class="text-navy font-bold">DIGIMEX</span> nos enfocamos en brindarte soluciones rápidas y efectivas para tus equipos de cómputo. Nuestro proceso es transparente: realizamos un <strong>diagnóstico preciso</strong>, detectamos la falla y procedemos con el <strong>cambio de componentes</strong> o ajustes necesarios.
-        </p>
+        <div class="relative z-10 lg:pr-12">
+            <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-blue-700 bg-white border border-blue-200 rounded-full px-5 py-2 mb-6 shadow-sm">
+                <i class="fas fa-microchip"></i> Reparación a Nivel Componente
+            </span>
 
-        <!-- Banner Informativo -->
-        <div class="mb-16 bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
-            <div class="flex items-start gap-4">
-                <span class="text-blue-500 text-2xl mt-1"><i class="fas fa-info-circle"></i></span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tight">
+                Reparación de<br>
+                <span class="logo-gradient">PC y Laptop</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-600 max-w-xl leading-relaxed mb-9">
+                Diagnóstico preciso y reparaciones a nivel de componente para que tu equipo vuelva
+                al máximo rendimiento. Servicio especializado con resultados duraderos.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="https://m.me/d1g1mex" target="_blank"
+                   class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:-translate-y-0.5">
+                    <i class="fab fa-facebook-messenger text-xl"></i> Contactar por Messenger
+                </a>
+                <a href="{{ '/galeria-reparaciones/' | relative_url }}"
+                   class="inline-flex items-center gap-3 bg-white hover:bg-blue-50 text-blue-700 border-2 border-blue-200 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5">
+                    Ver Trabajos <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <a href="{{ '/licencias-office/' | relative_url }}"
+               class="inline-flex items-center gap-2 mt-6 text-sm text-blue-600 hover:text-blue-800 transition-colors">
+                <i class="fas fa-cube"></i> ¿Necesitas una licencia de Office? Cótizala aquí
+                <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+
+        <!-- Imagen del hero (Móvil/tablet): tarjeta -->
+        <div class="relative lg:hidden">
+            <div class="absolute -inset-6 bg-gradient-to-br from-blue-400/30 to-cyan-300/30 rounded-[2.5rem] blur-2xl pointer-events-none" aria-hidden="true"></div>
+            <div class="relative rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl shadow-blue-200/60 aspect-[4/3]">
+                <img src="{{ '/img/repair_hero.png' | relative_url }}" alt="Reparación de PC y Laptop"
+                     class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl shadow-blue-100 border border-blue-100 px-5 py-3.5 flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
+                    <i class="fas fa-screwdriver-wrench"></i>
+                </span>
                 <div>
-                    <h3 class="text-lg font-bold text-navy mb-1 text-blue-900">Nota Importante</h3>
-                    <p class="text-blue-800 text-sm italic">
-                        Por el momento, nos especializamos exclusivamente en reparaciones de primer nivel (cambio de componentes y software). No realizamos reparaciones electrónicas a nivel componente (micro-soldadura).
-                    </p>
+                    <p class="text-sm font-bold text-slate-900">Servicio Especializado</p>
+                    <p class="text-xs text-gray-500">Cuidamos tu equipo</p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SECCIÓN: SERVICIOS DE REPARACIÓN
+     ============================================================ -->
+<section id="reparaciones" class="bg-white py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto mb-14 sm:mb-16">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
+                <i class="fas fa-tools"></i> Servicios de Taller
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-5">
+                Especialistas en <span class="logo-gradient">Reparación de PC y Laptop</span>
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                En <strong class="text-slate-900">DIGIMEX</strong> nos enfocamos en brindarte soluciones rápidas y efectivas para tus equipos de cómputo.
+                Nuestro proceso es transparente: realizamos un <strong class="text-blue-600">diagnóstico preciso</strong>, detectamos la falla
+                a nivel de componente y procedemos con la <strong class="text-blue-600">reparación o el cambio de componentes</strong> necesarios.
+            </p>
         </div>
 
         <!-- Grid de Servicios -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            <!-- Servicio 1: Pantallas y Estructura -->
-            <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div class="w-16 h-16 bg-cyan/10 rounded-full flex items-center justify-center text-cyan text-3xl mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="p-8 rounded-2xl bg-blue-50/50 border border-blue-100 hover:bg-white hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 hover:-translate-y-1 transition-all duration-300">
+                <div class="w-16 h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6">
                     <i class="fas fa-laptop"></i>
                 </div>
-                <h3 class="text-xl font-bold text-navy mb-4">Display y Estructura</h3>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Display y Estructura</h3>
                 <ul class="space-y-3 text-gray-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan"></i> Cambio de displays</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan"></i> Reparación de bisagras</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-cyan"></i> Reemplazo de carcasas</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-blue-600"></i> Cambio de displays</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-blue-600"></i> Reparación de bisagras</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-blue-600"></i> Reemplazo de carcasas</li>
                 </ul>
             </div>
 
-            <!-- Servicio 2: Optimización y Hardware -->
-            <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div class="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center text-navy text-3xl mb-6">
+            <div class="p-8 rounded-2xl bg-cyan-50/60 border border-cyan-100 hover:bg-white hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-100 hover:-translate-y-1 transition-all duration-300">
+                <div class="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-600 text-3xl mb-6">
                     <i class="fas fa-microchip"></i>
                 </div>
-                <h3 class="text-xl font-bold text-navy mb-4">Hardware y Rendimiento</h3>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Hardware y Rendimiento</h3>
                 <ul class="space-y-3 text-gray-600">
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-navy"></i> Cambio de discos duros / SSD</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-navy"></i> Ampliación de memoria RAM</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-navy"></i> Cambio de pasta térmica</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-cyan-600"></i> Cambio de discos duros / SSD</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-cyan-600"></i> Ampliación de memoria RAM</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-cyan-600"></i> Cambio de pasta térmica</li>
                 </ul>
             </div>
 
-            <!-- Servicio 3: Software y Respaldo -->
-            <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all duration-300">
-                <div class="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-6">
+            <div class="p-8 rounded-2xl bg-blue-50/50 border border-blue-100 hover:bg-white hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 hover:-translate-y-1 transition-all duration-300">
+                <div class="w-16 h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6">
                     <i class="fas fa-compact-disc"></i>
                 </div>
-                <h3 class="text-xl font-bold text-navy mb-4">Software, Sistemas y Respaldo</h3>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">Software, Sistemas y Respaldo</h3>
                 <ul class="space-y-3 text-gray-600">
-                    <li class="flex items-center gap-2 font-bold text-navy"><i class="fas fa-save text-blue-600"></i> Respaldo de información (Backup)</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> Instalación de sistema operativo</li>
-                    <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> Instalación de Office</li>
+                    <li class="flex items-center gap-2.5 font-bold text-slate-900"><i class="fas fa-save text-blue-600"></i> Respaldo de información (Backup)</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-blue-600"></i> Instalación de sistema operativo</li>
+                    <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-blue-600"></i> Instalación de Office</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Opiniones de Clientes (Movidas desde Home anteriormente) -->
-        <div class="mb-24 bg-gray-50 py-16 rounded-3xl border border-gray-100 overflow-hidden px-6 lg:px-12">
+        <!-- Opiniones de Clientes -->
+        <div class="mb-16 bg-gradient-to-br from-blue-50 to-cyan-50/50 border border-blue-100 py-16 rounded-3xl px-6 lg:px-12">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-navy mb-4">Lo que dicen nuestros <span class="text-cyan">Clientes</span></h2>
-                <div class="flex items-center justify-center gap-1 text-yellow-400 text-xl mb-2">
+                <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-white border border-blue-200 rounded-full px-4 py-1.5 mb-5">
+                    <i class="fas fa-star"></i> Testimonios
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Lo que dicen nuestros <span class="logo-gradient">Clientes</span></h2>
+                <div class="flex items-center justify-center gap-1 text-amber-400 text-xl mb-2">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="text-gray-500 font-medium italic">"Reparaciones honestas y garantizadas"</p>
+                <p class="text-gray-500 font-medium italic">"Reparaciones honestas y con resultados visibles"</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonios -->
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-cyan/20 rounded-full flex items-center justify-center text-cyan font-bold">M</div>
-                        <h4 class="font-bold text-navy text-sm">Monica S</h4>
+                        <div class="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 font-bold">M</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Monica S</h4>
                     </div>
                     <p class="text-gray-600 text-xs italic leading-relaxed">
                         "Excelente servicio. Recomiendo por qué es gente honesta..."
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-navy/20 rounded-full flex items-center justify-center text-navy font-bold">A</div>
-                        <h4 class="font-bold text-navy text-sm">Adrián GR GT</h4>
+                        <div class="w-10 h-10 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-600 font-bold">A</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Adrián GR GT</h4>
                     </div>
                     <p class="text-gray-600 text-xs italic leading-relaxed">
                         "Muy buena atención, muy profesional te explican que es lo que tiene el equipo..."
                     </p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-600 font-bold">H</div>
-                        <h4 class="font-bold text-navy text-sm">Hanoch Michel</h4>
+                        <div class="w-10 h-10 bg-blue-700/10 rounded-full flex items-center justify-center text-blue-700 font-bold">H</div>
+                        <h4 class="font-bold text-slate-900 text-sm">Hanoch Michel</h4>
                     </div>
                     <p class="text-gray-600 text-xs italic leading-relaxed">
-                        "Muy profesional el servicio,honestidad y calidad. Lo recomiendo al 100%..."
+                        "Muy profesional el servicio, honestidad y calidad. Lo recomiendo al 100%..."
                     </p>
                 </div>
             </div>
             <div class="text-center mt-8">
-                <a href="https://www.google.com/search?q=Digitalizaci%C3%B3n-M%C3%A9xico+Opiniones" target="_blank" class="text-xs text-navy font-bold hover:text-cyan transition-colors flex items-center justify-center gap-1">
+                <a href="https://www.google.com/search?q=Digitalizaci%C3%B3n-M%C3%A9xico+Opiniones" target="_blank"
+                   class="text-xs text-blue-600 font-bold hover:text-blue-800 transition-colors inline-flex items-center justify-center gap-1">
                     Ver más testimonios <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Enlace a la Galería -->
-        <div class="mb-24 text-center">
-            <h2 class="text-3xl font-extrabold text-navy mb-6">Galería de <span class="text-cyan">Trabajos de Reparación</span></h2>
-            <a href="{{ '/galeria-reparaciones/' | relative_url }}" class="inline-flex items-center gap-3 bg-cyan text-white font-extrabold px-10 py-4 rounded-xl hover:bg-navy transition-all duration-300 shadow-xl shadow-cyan/20">
-                <i class="fas fa-images text-xl"></i>
-                Ver Galería Completa de Equipos
-            </a>
+<!-- ============================================================
+     PREVIEW DE LA GALERÍA DE SERVICIOS
+     ============================================================ -->
+{% include galeria.html titulo="Galería de Reparaciones" descripcion="Conoce los servicios que ofrecemos, organizados por categoría con imágenes reales de nuestro taller." limit=8 ocultar_filtros=true mostrar_ver_todas=true %}
+
+<!-- ============================================================
+     BANDA PROMOCIONAL — LICENCIAS OFFICE
+     ============================================================ -->
+<section class="bg-gray-50 py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 px-8 py-12 sm:px-14 sm:py-16">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-white/15 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute inset-0 opacity-[0.08] pointer-events-none"
+                 style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;" aria-hidden="true"></div>
+            <div class="relative grid lg:grid-cols-[1fr_auto] gap-8 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-100 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
+                        <i class="fas fa-cube"></i> Licencias Originales
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">¿Necesitas Microsoft Office?</h2>
+                    <p class="text-blue-50 text-lg max-w-2xl leading-relaxed">
+                        Microsoft 365 u Office 2024, licencias 100% originales con entrega por correo, instalación incluida y soporte.
+                    </p>
+                </div>
+                <a href="{{ '/licencias-office/' | relative_url }}"
+                   class="inline-flex items-center gap-3 bg-white text-blue-700 font-extrabold px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-xl hover:-translate-y-0.5 justify-center">
+                    Ver Licencias Office <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- SECCIÓN DE CONTACTO - PREMIUM REDESIGN -->
-<section id="contacto" style="background: linear-gradient(135deg, #111827 0%, #1f2937 100%); padding: 5rem 1.5rem;">
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-        <span style="display: inline-block; padding: 5px 16px; border-radius: 999px; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #10b981; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1.2rem;">
-            Atención Personalizada
+<!-- ============================================================
+     SECCIÓN DE CONTACTO
+     ============================================================ -->
+<section id="contacto" class="bg-white py-20 sm:py-28">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
+            <i class="fas fa-headset"></i> Atención Personalizada
         </span>
-        <h2 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #ffffff; margin: 0 0 1rem 0; line-height: 1.2;">
-            ¿Cómo podemos <span style="color: #10b981;">ayudarte?</span>
-        </h2>
-        <p style="color: rgba(255,255,255,0.55); font-size: 1rem; margin: 0 auto 3.5rem auto; max-width: 480px; line-height: 1.7;">
-            Contáctanos a través de Facebook o envíanos un mensaje por correo electrónico.
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">¿Cómo podemos <span class="logo-gradient">ayudarte?</span></h2>
+        <p class="text-gray-600 text-lg mb-14 max-w-xl mx-auto leading-relaxed">
+            Contáctanos a través de Messenger, Facebook o envíanos un mensaje por correo electrónico.
         </p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; text-align: left;">
+        <div class="grid sm:grid-cols-2 gap-8 text-left">
 
-            <!-- Facebook -->
-            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                <div style="width: 56px; height: 56px; background: #1877F2; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">
-                    <i class="fab fa-facebook-square"></i>
+            <!-- Messenger / Facebook -->
+            <div class="bg-blue-50/60 border border-blue-100 rounded-3xl p-8 flex flex-col gap-6 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-100 transition-all duration-300">
+                <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl flex items-center justify-center text-2xl text-white shadow-lg shadow-blue-600/30">
+                    <i class="fab fa-facebook-messenger"></i>
                 </div>
                 <div>
-                    <h3 style="color: #ffffff; font-size: 1.3rem; font-weight: 700; margin: 0 0 0.5rem 0;">Facebook</h3>
-                    <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; line-height: 1.6; margin: 0;">
-                        Escríbenos en Facebook para diagnósticos y presupuestos. Atención rápida y personalizada.
+                    <h3 class="text-slate-900 text-xl font-bold mb-2">Messenger / Facebook</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Escríbenos para diagnósticos, presupuestos y cotización de licencias Office.
+                        Atención rápida y personalizada.
                     </p>
                 </div>
-                <a href="https://www.facebook.com/d1g1mex" target="_blank"
-                   style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0.9rem 1.5rem; background: #1877F2; color: #ffffff; font-weight: 700; font-size: 1rem; border-radius: 12px; text-decoration: none; transition: background 0.3s; margin-top: auto;"
-                   onmouseover="this.style.background='#1565c0'" onmouseout="this.style.background='#1877F2'">
-                    <i class="fab fa-facebook-square"></i> Escribir en Facebook
+                <a href="https://m.me/d1g1mex" target="_blank"
+                   class="mt-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-colors duration-300 shadow-md shadow-blue-600/25">
+                    <i class="fab fa-facebook-messenger"></i> Escribir por Messenger
                 </a>
             </div>
 
             <!-- Correo Electrónico -->
-            <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2.5rem;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                    <div style="width: 56px; height: 56px; background: #10b981; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0;">
+            <div class="bg-cyan-50/50 border border-cyan-100 rounded-3xl p-8 flex flex-col gap-6 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-100 transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-2xl text-cyan-600">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div>
-                        <h3 style="color: #ffffff; font-size: 1.3rem; font-weight: 700; margin: 0 0 0.2rem 0;">Correo Electrónico</h3>
-                        <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem; margin: 0;">Te respondemos en menos de 24hrs.</p>
+                        <h3 class="text-slate-900 text-xl font-bold">Correo Electrónico</h3>
+                        <p class="text-gray-500 text-sm">Te respondemos en menos de 24hrs.</p>
                     </div>
                 </div>
-                <form action="https://formspree.io/f/xnnkjzqr" method="POST" style="display: flex; flex-direction: column; gap: 0.9rem;" id="contact-form">
+                <form action="https://formspree.io/f/xnnkjzqr" method="POST" id="contact-form" class="flex flex-col gap-3.5 mt-4">
                     <input type="text" name="name" placeholder="Tu nombre completo" required
-                           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: white; padding: 0.8rem 1rem; border-radius: 10px; font-size: 0.95rem; outline: none; transition: border 0.3s; width: 100%; box-sizing: border-box;"
-                           onfocus="this.style.border='1px solid #10b981'" onblur="this.style.border='1px solid rgba(255,255,255,0.12)'">
+                           class="bg-white border border-gray-300 text-slate-900 px-4 py-3.5 rounded-xl text-sm outline-none transition-colors placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20">
                     <input type="email" name="email" placeholder="tu@correo.com" required
-                           style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: white; padding: 0.8rem 1rem; border-radius: 10px; font-size: 0.95rem; outline: none; transition: border 0.3s; width: 100%; box-sizing: border-box;"
-                           onfocus="this.style.border='1px solid #10b981'" onblur="this.style.border='1px solid rgba(255,255,255,0.12)'">
+                           class="bg-white border border-gray-300 text-slate-900 px-4 py-3.5 rounded-xl text-sm outline-none transition-colors placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20">
                     <textarea name="message" placeholder="¿En qué podemos ayudarte?" rows="3" required
-                              style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: white; padding: 0.8rem 1rem; border-radius: 10px; font-size: 0.95rem; outline: none; transition: border 0.3s; width: 100%; box-sizing: border-box; resize: vertical;"
-                              onfocus="this.style.border='1px solid #10b981'" onblur="this.style.border='1px solid rgba(255,255,255,0.12)'"></textarea>
+                              class="bg-white border border-gray-300 text-slate-900 px-4 py-3.5 rounded-xl text-sm outline-none transition-colors placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 resize-y"></textarea>
                     <button type="submit" id="submit-btn"
-                            style="background: #10b981; color: white; font-weight: 700; font-size: 1rem; padding: 0.9rem 1.5rem; border-radius: 12px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.3s;"
-                            onmouseover="this.style.background='#059669'" onmouseout="this.style.background='#10b981'">
+                            class="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-3.5 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/25 flex items-center justify-center gap-2">
                         <i class="fas fa-paper-plane"></i> Enviar Mensaje
                     </button>
-                    <div id="form-status" class="hidden" style="margin-top: 0.5rem;"></div>
+                    <div id="form-status" class="hidden mt-1"></div>
                 </form>
             </div>
 

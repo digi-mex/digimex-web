@@ -1,0 +1,18 @@
+# Portafolio de diseño web.
+# Para agregar un proyecto nuevo, añade una entrada con:
+#   titulo, url, imagen, descripcion y una o más categorias.
+proyectos:
+  - titulo: "Ecología Industrial"
+    url: "https://ecologia-industrial.netlify.app/"
+    imagen: "/img/portafolio/ecologia-industrial.webp"
+    descripcion: "Plataforma digital interactiva para la difusión y gestión de prácticas industriales sostenibles y optimización de recursos."
+    categorias:
+      - "Diseño Web"
+      - "Sustentabilidad"
+  - titulo: "Jardinería García"
+    url: "https://jardineria-garcia-lm.netlify.app/"
+    imagen: "/img/portafolio/jardineria-garcia.webp"
+    descripcion: "Sitio web para servicios de jardinería y mantenimiento: paisajismo, impermeabilización, plomería y decorados en Tecámac y alrededores."
+    categorias:
+      - "Diseño Web"
+      - "Negocio Local"
