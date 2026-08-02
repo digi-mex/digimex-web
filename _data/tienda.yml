@@ -1,0 +1,11 @@
+# Tienda de artículos de DIGIMEX
+# Agrega cada artículo que quieras mostrar. La tienda se actualiza con solo guardar este archivo.
+#
+# Campos de cada artículo:
+#   nombre:      "Nombre del artículo"
+#   precio:      "$xxx" (o texto como "Seminuevo")
+#   imagen:      "/img/productos/tu-foto.jpg"  (pon la foto en img/productos/)
+#   descripcion: "Breve descripción (opcional)"
+#   etiqueta:    "Nuevo" / "Seminuevo" / "Oferta"  (opcional)
+#
+articulos:
