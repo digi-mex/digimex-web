@@ -12,13 +12,14 @@ permalink: /portafolio-diseno/
     <div class="absolute -bottom-32 -left-24 w-80 h-80 bg-cyan-300/20 rounded-full blur-[100px] pointer-events-none" aria-hidden="true"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
         <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-cyan-200 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-            <i class="fas fa-folder-open"></i> Nuestro Trabajo
+            <i class="fas fa-laptop-code"></i> Portafolio de Diseño Web
         </span>
         <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">
-            Proyectos <span class="text-cyan-300">Realizados</span>
+            Diseños Web <span class="text-cyan-300">Realizados</span>
         </h1>
         <p class="text-blue-50 text-lg max-w-2xl mx-auto leading-relaxed">
-            Soluciones digitales creativas y orientadas a resultados para empresas que buscan destacar online.
+            Estos son los sitios web que hemos diseñado y construido para nuestros clientes,
+            de principio a fin: diseño, desarrollo y puesta en marcha.
         </p>
     </div>
 </section>

@@ -214,13 +214,47 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
                     </span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">¿Necesitas Microsoft Office?</h2>
                     <p class="text-blue-50 text-lg max-w-2xl leading-relaxed">
-                        Microsoft 365 u Office 2024, licencias 100% originales con entrega por correo, instalación incluida y soporte.
+                        Office 2019 y Office 2024, licencias 100% originales con entrega por correo, instalación incluida y soporte.
                     </p>
                 </div>
                 <a href="{{ '/licencias-office/' | relative_url }}"
                    class="inline-flex items-center gap-3 bg-white text-blue-700 font-extrabold px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-xl hover:-translate-y-0.5 justify-center">
                     Ver Licencias Office <i class="fas fa-arrow-right text-sm"></i>
                 </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     NOVEDADES DE FACEBOOK — PUBLICACIONES AUTOMÁTICAS
+     ============================================================ -->
+<section class="bg-white py-20 sm:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
+                <i class="fab fa-facebook-square"></i> Facebook
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
+                Nuestras <span class="logo-gradient">publicaciones</span>
+            </h2>
+            <p class="text-gray-600 text-lg">
+                Compartimos promociones, tips y novedades del taller. Esto se actualiza solo desde nuestro Facebook.
+            </p>
+        </div>
+
+        <div class="max-w-lg mx-auto">
+            <div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/d1g1mex"
+                     data-tabs="timeline"
+                     data-width="500"
+                     data-height="700"
+                     data-small-header="false"
+                     data-adapt-container-width="true"
+                     data-hide-cover="false"
+                     data-show-facepile="true">
+                </div>
             </div>
         </div>
     </div>

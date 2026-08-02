@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 640" role="img" aria-label="Caja de Microsoft Office 2019 Pro Plus">
+  <defs>
+    <linearGradient id="front19" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="top19" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="side19" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1e40af"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sombra -->
+  <ellipse cx="260" cy="602" rx="200" ry="22" fill="#0f172a" opacity="0.14"/>
+
+  <!-- cara superior (tapa) -->
+  <polygon points="150,120 370,120 340,64 120,64" fill="url(#top19)"/>
+
+  <!-- cara lateral (grosor) -->
+  <polygon points="370,120 340,64 340,512 370,568" fill="url(#side19)"/>
+
+  <!-- cara frontal -->
+  <rect x="120" y="120" width="250" height="448" rx="6" fill="url(#front19)"/>
+
+  <!-- brillo superior frontal -->
+  <rect x="120" y="120" width="250" height="200" fill="#ffffff" opacity="0.06"/>
+
+  <!-- franja inferior -->
+  <rect x="120" y="506" width="250" height="62" fill="#0f172a" opacity="0.18"/>
+
+  <!-- logo office: 4 cuadros -->
+  <rect x="170" y="190" width="34" height="34" rx="8" fill="#ffffff" opacity="0.95"/>
+  <rect x="212" y="190" width="34" height="34" rx="8" fill="#ffffff" opacity="0.6"/>
+  <rect x="170" y="232" width="34" height="34" rx="8" fill="#ffffff" opacity="0.6"/>
+  <rect x="212" y="232" width="34" height="34" rx="8" fill="#ffffff" opacity="0.35"/>
+
+  <!-- marca -->
+  <text x="160" y="330" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Microsoft Office</text>
+
+  <!-- versión -->
+  <text x="160" y="420" font-family="Arial, Helvetica, sans-serif" font-size="104" font-weight="800" fill="#ffffff" letter-spacing="-2">2019</text>
+
+  <!-- edición -->
+  <text x="160" y="460" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#bfdbfe" letter-spacing="2">PROFESSIONAL PLUS</text>
+
+  <!-- píldora permanente -->
+  <rect x="160" y="478" width="168" height="34" rx="17" fill="#ffffff" opacity="0.14"/>
+  <text x="244" y="501" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">LICENCIA PERMANENTE</text>
+</svg>

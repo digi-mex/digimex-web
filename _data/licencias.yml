@@ -1,47 +1,26 @@
 # Catálogo de licencias de Microsoft Office.
 # `destaque: true` resalta el producto más vendido en la página.
+# Solo licencias permanentes (pago único). Sin precios: se cotiza por Messenger.
 licencias:
-  - nombre: "Microsoft 365 Personal"
-    tipo: "Suscripción anual"
-    icono: "fa-user"
-    destaque: false
-    descripcion: "Office completo para 1 persona, siempre actualizado."
-    caracteristicas:
-      - "Word, Excel, PowerPoint y Outlook"
-      - "1 TB de espacio en OneDrive"
-      - "Copilot IA incluido en Office"
-      - "Renovable cada año"
-    nota: "Usuarios: 1"
-  - nombre: "Microsoft 365 Familia"
-    tipo: "Suscripción anual"
-    icono: "fa-users"
-    destaque: true
-    descripcion: "Para toda la familia, hasta 6 personas."
-    caracteristicas:
-      - "Todo lo de Personal, para 6 usuarios"
-      - "6 TB en OneDrive (1 TB por persona)"
-      - "Copilot IA incluido en Office"
-      - "Apps de escritorio y móviles"
-    nota: "Usuarios: hasta 6"
-  - nombre: "Office 2024 Hogar"
+  - nombre: "Office 2019 Pro Plus"
     tipo: "Pago único"
     icono: "fa-file-word"
     destaque: false
-    descripcion: "Licencia perpetua de pago único, sin renovaciones."
+    descripcion: "Código de activación genuino de 25 dígitos para Microsoft Office Professional Plus 2019. Licencia permanente no reinstalable."
     caracteristicas:
-      - "Word, Excel y PowerPoint"
-      - "Licencia perpetua para 1 PC o Mac"
+      - "Word, Excel, PowerPoint, Outlook y más"
+      - "Licencia permanente para 1 PC"
       - "Instalación y activación incluidas"
       - "Sin renovaciones anuales"
-    nota: "Dispositivos: 1"
-  - nombre: "Office 2024 Hogar y Empresas"
+    nota: "Dispositivo: 1"
+  - nombre: "Office 2024 Pro Plus"
     tipo: "Pago único"
     icono: "fa-briefcase"
-    destaque: false
-    descripcion: "Licencia perpetua con Outlook y uso comercial."
+    destaque: true
+    descripcion: "Recibe tu clave de activación junto con el enlace de descarga. Nuestra guía detallada te acompaña paso a paso para activar tu Office."
     caracteristicas:
-      - "Word, Excel, PowerPoint y Outlook"
-      - "Uso comercial permitido"
-      - "Licencia perpetua para 1 PC o Mac"
-      - "Instalación y activación incluidas"
-    nota: "Dispositivos: 1"
+      - "Word, Excel, PowerPoint, Outlook y más"
+      - "Versión más reciente de Office"
+      - "Licencia permanente para 1 PC"
+      - "Guía de instalación y activación incluida"
+    nota: "Dispositivo: 1"
