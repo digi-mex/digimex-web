@@ -14,23 +14,23 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
         <img src="{{ '/img/repair_hero.png' | relative_url }}" alt="Reparación de PC y Laptop a nivel componente"
              class="w-full h-full object-cover object-center" loading="eager">
         <!-- Degradados azules para que el texto se lea bien -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/80 to-cyan-900/60" aria-hidden="true"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-transparent to-blue-900/40" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-cyan-900/80" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-950/50 to-blue-900/60" aria-hidden="true"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 lg:min-h-[80vh] grid lg:grid-cols-2 gap-12 items-center">
 
         <div class="relative z-10 lg:pr-12">
-            <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-cyan-100 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-6 backdrop-blur-sm">
+            <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-cyan-100 bg-white/15 border border-white/25 rounded-full px-5 py-2 mb-6 backdrop-blur-sm">
                 <i class="fas fa-microchip"></i> Reparación a Nivel Componente
             </span>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05] mb-6 tracking-tight">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05] mb-6 tracking-tight drop-shadow-[0_2px_12px_rgba(15,23,42,0.85)]">
                 Reparación de<br>
                 <span class="bg-gradient-to-r from-sky-300 via-blue-300 to-cyan-200 bg-clip-text text-transparent">PC y Laptop</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-blue-100/90 max-w-xl leading-relaxed mb-9">
+            <p class="text-base sm:text-lg text-blue-50 max-w-xl leading-relaxed mb-9 drop-shadow-[0_1px_6px_rgba(15,23,42,0.8)]">
                 Diagnóstico preciso y reparaciones a nivel de componente para que tu equipo vuelva
                 al máximo rendimiento. Servicio especializado con resultados duraderos.
             </p>
