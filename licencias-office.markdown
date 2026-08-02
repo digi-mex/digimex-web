@@ -48,24 +48,28 @@ permalink: /licencias-office/
         </div>
 
         <!-- Imágenes de producto -->
-        <div class="relative flex items-end justify-center gap-6 sm:gap-10">
-            <!-- Office 2019 -->
-            <div class="w-40 sm:w-48 lg:w-56 drop-shadow-2xl transition-transform duration-300 hover:-translate-y-2">
-                <img src="{{ '/img/office/office-2019.svg' | relative_url }}" alt="Microsoft Office 2019 Pro Plus" class="w-full h-auto">
-            </div>
-            <!-- Office 2024 (destacado, al frente) -->
-            <div class="relative -ml-4 sm:-ml-6 w-48 sm:w-56 lg:w-64 drop-shadow-2xl transition-transform duration-300 hover:-translate-y-2 z-10">
-                <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[11px] font-bold uppercase tracking-widest text-white bg-sky-400 rounded-full px-4 py-1.5 shadow-lg shadow-sky-900/40 z-20">
-                    Más vendido
-                </span>
-                <img src="{{ '/img/office/office-2024.svg' | relative_url }}" alt="Microsoft Office 2024 Pro Plus" class="w-full h-auto">
+        <div class="relative">
+            <div class="grid grid-cols-2 items-end gap-3 sm:gap-8 max-w-md mx-auto">
+                <!-- Office 2019 -->
+                <div class="drop-shadow-2xl transition-transform duration-300 hover:-translate-y-2">
+                    <img src="{{ '/img/office/office-2019.svg' | relative_url }}" alt="Microsoft Office 2019 Pro Plus" class="w-full h-auto">
+                </div>
+                <!-- Office 2024 (destacado, al frente) -->
+                <div class="relative drop-shadow-2xl transition-transform duration-300 hover:-translate-y-2 z-10">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white bg-sky-400 rounded-full px-3 py-1.5 shadow-lg shadow-sky-900/40 z-20 whitespace-nowrap">
+                        Más vendido
+                    </span>
+                    <img src="{{ '/img/office/office-2024.svg' | relative_url }}" alt="Microsoft Office 2024 Pro Plus" class="w-full h-auto">
+                </div>
             </div>
             <!-- sello de confianza -->
-            <div class="absolute -bottom-4 right-0 sm:right-2 bg-white rounded-2xl shadow-xl shadow-blue-900/20 border border-blue-100 px-5 py-3 flex items-center gap-3">
-                <span class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg"><i class="fas fa-shield-halved"></i></span>
-                <div>
-                    <p class="text-sm font-bold text-slate-900">Activación oficial</p>
-                    <p class="text-xs text-gray-500">Licencias 100% verificadas</p>
+            <div class="mt-6 sm:mt-8 flex justify-center">
+                <div class="bg-white rounded-2xl shadow-xl shadow-blue-900/20 border border-blue-100 px-5 py-3 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg shrink-0"><i class="fas fa-shield-halved"></i></span>
+                    <div>
+                        <p class="text-sm font-bold text-slate-900">Activación oficial</p>
+                        <p class="text-xs text-gray-500">Licencias 100% verificadas</p>
+                    </div>
                 </div>
             </div>
         </div>

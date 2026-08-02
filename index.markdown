@@ -6,79 +6,51 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
 ---
 
 <!-- ============================================================
-     HERO — BANNER DE ANCHO COMPLETO
+     HERO — IMAGEN DE FONDO A TODO LO ANCHO
      ============================================================ -->
-<section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-cyan-50/70">
-    <div class="absolute -top-32 -right-24 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[130px] pointer-events-none" aria-hidden="true"></div>
-    <div class="absolute -bottom-40 -left-24 w-[450px] h-[450px] bg-cyan-100/50 rounded-full blur-[130px] pointer-events-none" aria-hidden="true"></div>
-
-    <!-- Banner de imagen (Desktop): ocupa todo el lado derecho de borde a borde -->
-    <div class="hidden lg:block absolute inset-y-0 right-0 w-[52%]">
+<section class="relative overflow-hidden">
+    <!-- Imagen de fondo: cubre todo el hero de borde a borde -->
+    <div class="absolute inset-0">
         <img src="{{ '/img/repair_hero.png' | relative_url }}" alt="Reparación de PC y Laptop a nivel componente"
-             class="w-full h-full object-cover" loading="eager">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-50 via-white/40 to-transparent" aria-hidden="true"></div>
-        <div class="absolute bottom-8 left-8 bg-white rounded-2xl shadow-xl shadow-blue-100 border border-blue-100 px-5 py-3.5 flex items-center gap-3">
-            <span class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
-                <i class="fas fa-screwdriver-wrench"></i>
-            </span>
-            <div>
-                <p class="text-sm font-bold text-slate-900">Servicio Especializado</p>
-                <p class="text-xs text-gray-500">Cuidamos tu equipo</p>
-            </div>
-        </div>
+             class="w-full h-full object-cover object-center" loading="eager">
+        <!-- Degradados azules para que el texto se lea bien -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-900/80 to-cyan-900/60" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-transparent to-blue-900/40" aria-hidden="true"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 lg:min-h-[80vh] grid lg:grid-cols-2 gap-12 items-center">
 
         <div class="relative z-10 lg:pr-12">
-            <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-blue-700 bg-white border border-blue-200 rounded-full px-5 py-2 mb-6 shadow-sm">
+            <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold uppercase tracking-widest text-cyan-100 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-6 backdrop-blur-sm">
                 <i class="fas fa-microchip"></i> Reparación a Nivel Componente
             </span>
 
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.05] mb-6 tracking-tight">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05] mb-6 tracking-tight">
                 Reparación de<br>
-                <span class="logo-gradient">PC y Laptop</span>
+                <span class="bg-gradient-to-r from-sky-300 via-blue-300 to-cyan-200 bg-clip-text text-transparent">PC y Laptop</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-gray-600 max-w-xl leading-relaxed mb-9">
+            <p class="text-base sm:text-lg text-blue-100/90 max-w-xl leading-relaxed mb-9">
                 Diagnóstico preciso y reparaciones a nivel de componente para que tu equipo vuelva
                 al máximo rendimiento. Servicio especializado con resultados duraderos.
             </p>
 
             <div class="flex flex-wrap gap-4">
                 <a href="https://m.me/d1g1mex" target="_blank"
-                   class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-extrabold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:-translate-y-0.5">
-                    <i class="fab fa-facebook-messenger text-xl"></i> Contactar por Messenger
+                   class="inline-flex items-center gap-3 bg-white text-blue-700 hover:bg-blue-50 font-extrabold px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-blue-950/30 hover:-translate-y-0.5">
+                    <i class="fab fa-facebook-messenger text-xl text-blue-600"></i> Contactar por Messenger
                 </a>
                 <a href="{{ '/galeria-reparaciones/' | relative_url }}"
-                   class="inline-flex items-center gap-3 bg-white hover:bg-blue-50 text-blue-700 border-2 border-blue-200 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5">
+                   class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 font-bold px-8 py-4 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5">
                     Ver Trabajos <i class="fas fa-arrow-right text-xs"></i>
                 </a>
             </div>
 
             <a href="{{ '/licencias-office/' | relative_url }}"
-               class="inline-flex items-center gap-2 mt-6 text-sm text-blue-600 hover:text-blue-800 transition-colors">
+               class="inline-flex items-center gap-2 mt-6 text-sm text-sky-200 hover:text-white transition-colors">
                 <i class="fas fa-cube"></i> ¿Necesitas una licencia de Office? Cótizala aquí
                 <i class="fas fa-arrow-right text-xs"></i>
             </a>
-        </div>
-
-        <!-- Imagen del hero (Móvil/tablet): tarjeta -->
-        <div class="relative lg:hidden">
-            <div class="absolute -inset-6 bg-gradient-to-br from-blue-400/30 to-cyan-300/30 rounded-[2.5rem] blur-2xl pointer-events-none" aria-hidden="true"></div>
-            <div class="relative rounded-[2rem] overflow-hidden border-4 border-white shadow-2xl shadow-blue-200/60 aspect-[4/3]">
-                <img src="{{ '/img/repair_hero.png' | relative_url }}" alt="Reparación de PC y Laptop"
-                     class="w-full h-full object-cover" loading="lazy">
-            </div>
-            <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl shadow-blue-100 border border-blue-100 px-5 py-3.5 flex items-center gap-3">
-                <span class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg">
-                    <i class="fas fa-screwdriver-wrench"></i>
-                </span>
-                <div>
-                    <p class="text-sm font-bold text-slate-900">Servicio Especializado</p>
-                    <p class="text-xs text-gray-500">Cuidamos tu equipo</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -233,28 +205,33 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
-                <i class="fab fa-facebook-square"></i> Facebook
+                <i class="fas fa-store"></i> Tienda en Facebook Marketplace
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
-                Nuestras <span class="logo-gradient">publicaciones</span>
+                Nuestros <span class="logo-gradient">artículos</span>
             </h2>
             <p class="text-gray-600 text-lg">
-                Compartimos promociones, tips y novedades del taller. Esto se actualiza solo desde nuestro Facebook.
+                Equipos, componentes y artículos que tenemos disponibles en nuestro Marketplace de Facebook.
+                Se actualiza automáticamente con cada publicación nueva.
             </p>
         </div>
 
         <div class="max-w-lg mx-auto">
-            <div class="overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
-                <div class="fb-page"
-                     data-href="https://www.facebook.com/d1g1mex"
-                     data-tabs="timeline"
-                     data-width="500"
-                     data-height="700"
-                     data-small-header="false"
-                     data-adapt-container-width="true"
-                     data-hide-cover="false"
-                     data-show-facepile="true">
-                </div>
+            <div class="relative overflow-hidden rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-8 sm:p-10 text-center shadow-sm">
+                <div class="absolute -top-16 -right-16 w-48 h-48 bg-blue-100/70 rounded-full blur-2xl pointer-events-none" aria-hidden="true"></div>
+                <span class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 text-white flex items-center justify-center text-3xl shadow-lg shadow-blue-600/25">
+                    <i class="fas fa-tags"></i>
+                </span>
+                <h3 class="text-xl font-extrabold text-slate-900 mb-2">Artículos en venta</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                    Visita nuestro perfil de Marketplace para ver el catálogo completo, fotos y disponibilidad.
+                </p>
+                <a href="https://www.facebook.com/marketplace/profile/100068770996814/?ref=permalink&tab=listings"
+                   target="_blank"
+                   class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:-translate-y-0.5">
+                    <i class="fab fa-facebook"></i> Ver artículos en Marketplace
+                </a>
+                <p class="text-xs text-gray-400 mt-3">Se abre en Facebook</p>
             </div>
         </div>
     </div>

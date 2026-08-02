@@ -221,11 +221,6 @@
 
     {% include cookie-banner.html %}
 
-    <!-- Facebook SDK (Page Plugin) -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v21.0"></script>
-
     <script>window.siteBaseUrl = "{{ '' | relative_url }}";</script>
     <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
     {% if page.url == '/' or page.url == '/galeria-reparaciones/' %}
