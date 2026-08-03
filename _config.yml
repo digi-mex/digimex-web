@@ -33,6 +33,9 @@ collections:
   trabajos:
     output: false
 
+# URLs limpias para las entradas del blog (sin el prefijo de categoría).
+permalink: /blog/:year/:month/:day/:title/
+
 # Build settings
 theme: minima
 plugins:

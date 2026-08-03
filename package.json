@@ -7,7 +7,8 @@
     "build:css": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css --minify",
     "build:js": "npx terser assets/js/script.js -o assets/js/script.min.js -c -m",
     "build": "npm run build:css && npm run build:js",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css --watch"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css --watch",
+    "sync": "node scripts/sync-content.js"
   },
   "keywords": [],
   "author": "",

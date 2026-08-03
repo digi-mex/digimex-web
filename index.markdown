@@ -199,41 +199,90 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
 </section>
 
 <!-- ============================================================
-     NOVEDADES DE FACEBOOK — PUBLICACIONES AUTOMÁTICAS
+     TIENDA — VISTA PREVIA DE ARTÍCULOS
      ============================================================ -->
 <section class="bg-white py-20 sm:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
             <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
-                <i class="fas fa-store"></i> Tienda en Facebook Marketplace
+                <i class="fas fa-store"></i> Tienda DIGIMEX
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">
                 Nuestros <span class="logo-gradient">artículos</span>
             </h2>
             <p class="text-gray-600 text-lg">
-                Equipos, componentes y artículos que tenemos disponibles en nuestro Marketplace de Facebook.
-                Se actualiza automáticamente con cada publicación nueva.
+                Equipos y componentes disponibles. Pregunta por cualquier artículo por Messenger.
             </p>
         </div>
 
-        <div class="max-w-lg mx-auto">
-            <div class="relative overflow-hidden rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-cyan-50 p-8 sm:p-10 text-center shadow-sm">
-                <div class="absolute -top-16 -right-16 w-48 h-48 bg-blue-100/70 rounded-full blur-2xl pointer-events-none" aria-hidden="true"></div>
-                <span class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 text-white flex items-center justify-center text-3xl shadow-lg shadow-blue-600/25">
-                    <i class="fas fa-tags"></i>
-                </span>
-                <h3 class="text-xl font-extrabold text-slate-900 mb-2">Artículos en venta</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                    Visita nuestro perfil de Marketplace para ver el catálogo completo, fotos y disponibilidad.
-                </p>
-                <a href="https://www.facebook.com/marketplace/profile/100068770996814/?ref=permalink&tab=listings"
-                   target="_blank"
-                   class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:-translate-y-0.5">
-                    <i class="fab fa-facebook"></i> Ver artículos en Marketplace
-                </a>
-                <p class="text-xs text-gray-400 mt-3">Se abre en Facebook</p>
-            </div>
+        {% assign preview = site.data.tienda.articulos | slice: 0, 3 %}
+        {% if preview.size > 0 %}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {% for a in preview %}
+            {% assign msg = 'Hola, me interesa: ' | append: a.nombre | url_encode %}
+            <article class="group bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col">
+                {% if a.imagen %}
+                <div class="relative aspect-[4/3] overflow-hidden bg-blue-50">
+                    <img src="{{ a.imagen | relative_url }}" alt="{{ a.nombre }}" loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    {% if a.etiqueta %}
+                    <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-blue-600 to-sky-500 rounded-full px-3 py-1.5 shadow-lg">
+                        {{ a.etiqueta }}
+                    </span>
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="relative aspect-[4/3] bg-gradient-to-br from-blue-50 to-sky-50 flex items-center justify-center">
+                    <i class="fas fa-box-open text-blue-200 text-6xl"></i>
+                    {% if a.etiqueta %}
+                    <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-blue-600 to-sky-500 rounded-full px-3 py-1.5 shadow-lg">
+                        {{ a.etiqueta }}
+                    </span>
+                    {% endif %}
+                </div>
+                {% endif %}
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-start justify-between gap-3 mb-2">
+                        <h3 class="text-lg font-bold text-slate-900 leading-snug">{{ a.nombre }}</h3>
+                        {% if a.precio %}
+                        <span class="text-lg font-extrabold text-blue-600 whitespace-nowrap">{{ a.precio }}</span>
+                        {% endif %}
+                    </div>
+                    {% if a.descripcion %}
+                    <p class="text-sm text-gray-600 leading-relaxed mb-5 line-clamp-2">{{ a.descripcion }}</p>
+                    {% endif %}
+                    <div class="mt-auto space-y-2.5">
+                        <a href="https://m.me/d1g1mex?text={{ msg }}" target="_blank"
+                           class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/20">
+                            <i class="fab fa-facebook-messenger"></i> Preguntar
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
         </div>
+        <div class="text-center">
+            <a href="{{ '/tienda/' | relative_url }}"
+               class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:-translate-y-0.5">
+                Ver todos los artículos <i class="fas fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+        {% else %}
+        <div class="max-w-lg mx-auto text-center bg-gray-50 border border-gray-200 rounded-3xl p-10 sm:p-14">
+            <span class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-3xl">
+                <i class="fas fa-tags"></i>
+            </span>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">Artículos en venta</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                Visita nuestra tienda para ver el catálogo completo, fotos y disponibilidad.
+            </p>
+            <a href="{{ '/tienda/' | relative_url }}"
+               class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/25 hover:-translate-y-0.5">
+                <i class="fas fa-store"></i> Ver la Tienda
+            </a>
+        </div>
+        {% endif %}
+
     </div>
 </section>
 

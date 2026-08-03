@@ -603,3 +603,112 @@ html {
     background-color: var(--color-accent-cyan);
     transform: translateY(-2px);
 }
+
+/* ============================================================
+   BLOG — TIPOGRAFÍA DEL CONTENIDO (SALIDA DE MARKDOWN)
+   ============================================================ */
+.blog-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.blog-content h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 2.25rem;
+    margin-bottom: 0.9rem;
+}
+
+.blog-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 1.75rem;
+    margin-bottom: 0.7rem;
+}
+
+.blog-content p {
+    margin-bottom: 1.25rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin: 0 0 1.25rem 0;
+    padding-left: 1.5rem;
+}
+
+.blog-content ul {
+    list-style: disc;
+}
+
+.blog-content ol {
+    list-style: decimal;
+}
+
+.blog-content li {
+    margin-bottom: 0.4rem;
+}
+
+.blog-content a {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.blog-content a:hover {
+    color: #1d4ed8;
+}
+
+.blog-content strong {
+    color: #0f172a;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid #2563eb;
+    background: #eff6ff;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-style: italic;
+    color: #475569;
+    margin: 1.5rem 0;
+}
+
+.blog-content code {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.35rem;
+    font-size: 0.9em;
+    color: #1e3a8a;
+}
+
+.blog-content pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.blog-content pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+
+.blog-content img {
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+.blog-content hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 2rem 0;
+}

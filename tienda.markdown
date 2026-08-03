@@ -65,12 +65,31 @@ permalink: /tienda/
                         {% endif %}
                     </div>
                     {% if a.descripcion %}
-                    <p class="text-sm text-gray-600 leading-relaxed mb-5">{{ a.descripcion }}</p>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2">{{ a.descripcion }}</p>
                     {% endif %}
-                    <a href="https://m.me/d1g1mex?text={{ msg }}" target="_blank"
-                       class="mt-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/20">
-                        <i class="fab fa-facebook-messenger"></i> Preguntar por este artículo
-                    </a>
+
+                    {% if a.detalles %}
+                    <details class="group mb-5">
+                        <summary class="cursor-pointer text-sm font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
+                            <i class="fas fa-chevron-right text-[10px] transition-transform duration-200 group-open:rotate-90"></i>
+                            Ver especificaciones
+                        </summary>
+                        <div class="mt-3 bg-gray-50 border border-gray-200 rounded-xl p-4 text-xs text-gray-600 leading-relaxed whitespace-pre-wrap">{{ a.detalles | escape }}</div>
+                    </details>
+                    {% endif %}
+
+                    <div class="mt-auto space-y-3">
+                        <a href="https://m.me/d1g1mex?text={{ msg }}" target="_blank"
+                           class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/20">
+                            <i class="fab fa-facebook-messenger"></i> Preguntar por este artículo
+                        </a>
+                        {% if a.enlace %}
+                        <a href="{{ a.enlace }}" target="_blank" rel="noopener"
+                           class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 hover:border-blue-400 text-gray-600 hover:text-blue-700 font-semibold py-2.5 px-6 rounded-xl transition-all duration-300">
+                            <i class="fas fa-external-link-alt"></i> Ver publicación
+                        </a>
+                        {% endif %}
+                    </div>
                 </div>
             </article>
             {% endfor %}

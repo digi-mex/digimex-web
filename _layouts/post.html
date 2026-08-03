@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<article class="bg-white py-16 sm:py-24 relative overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <header class="mb-10">
+            <nav class="text-sm text-gray-500 mb-6" aria-label="Ruta de navegación">
+                <a href="{{ '/blog/' | relative_url }}" class="hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+                    <i class="fas fa-arrow-left text-xs"></i> Volver al blog
+                </a>
+            </nav>
+            {% if post.categories %}
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
+                <i class="fas fa-newspaper"></i> {{ page.categories | first }}
+            </span>
+            {% endif %}
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">{{ page.title }}</h1>
+            <div class="flex items-center gap-3 text-sm text-gray-500">
+                {% assign mes_n = page.date | date: "%-m" | plus: 0 %}
+                {% assign mes = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+                {% assign mes_idx = mes_n | minus: 1 %}
+                <span class="inline-flex items-center gap-2"><i class="far fa-calendar-alt"></i> {{ page.date | date: "%-d" }} de {{ mes[mes_idx] }} de {{ page.date | date: "%Y" }}</span>
+                {% if page.autor %}
+                <span class="inline-flex items-center gap-2"><i class="far fa-user"></i> {{ page.autor }}</span>
+                {% endif %}
+            </div>
+        </header>
+
+        {% if page.image %}
+        <div class="rounded-3xl overflow-hidden border border-gray-200 mb-10 aspect-[16/8]">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-full object-cover" loading="eager">
+        </div>
+        {% endif %}
+
+        <div class="blog-content text-slate-700 leading-relaxed">
+            {{ content }}
+        </div>
+
+        <div class="mt-14 pt-8 border-t border-gray-200 flex items-center justify-between">
+            <a href="{{ '/blog/' | relative_url }}" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-800 transition-colors">
+                <i class="fas fa-arrow-left text-xs"></i> Todos los artículos
+            </a>
+            <a href="https://m.me/d1g1mex" target="_blank" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl transition-colors duration-300">
+                <i class="fab fa-facebook-messenger"></i> Escríbenos
+            </a>
+        </div>
+    </div>
+</article>

@@ -9,11 +9,12 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
 
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} | DIGIMEX{% else %}{{ site.title }}{% endif %}</title>
     <link rel="icon" type="image/x-icon" href="{{ '/img/digimex.ico' | relative_url }}">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description"
+        content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords"
-        content="landig page, SEO, Responsive, Marketing Digital, Diseño web, Diseño Web Colaborativo y Transparente, Diseño de Landing Pages de Producto, Agencia de Marketing Digital Integral, Posicionamiento Web Orgánico (SEO), Diseño Web de Alto Rendimiento">
+        content="{% if page.keywords %}{{ page.keywords }}{% else %}DIGIMEX, reparación de pc, soporte técnico, reparación a nivel componente, diseño web, marketing digital, SEO, licencias office, tienda de artículos{% endif %}">
 
     <!-- DNS Prefetch and Preconnect -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -26,9 +27,6 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <!-- Main CSS -->
-    <!--<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">-->
-    <!--<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">-->
-
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <!-- Google Fonts - Deferred -->

@@ -185,38 +185,87 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-blue-50/70 border-t border-blue-100 text-slate-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <div class="flex flex-col items-center justify-center">
+    <footer class="bg-slate-900 text-slate-300" aria-label="Pie de página">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-                <!-- Logo en Footer -->
-                <a href="{{ '/' | relative_url }}" class="text-2xl font-extrabold logo-font group mb-4 py-1">
-                    <span class="text-blue-600 group-hover:text-blue-700 transition-colors duration-300">< /</span> <span class="logo-gradient">DIGIMEX</span> <span class="text-blue-600 group-hover:text-blue-700 transition-colors duration-300">></span>
-                </a>
-
-                <!-- Redes Sociales en Footer -->
-                <div class="flex space-x-4 mt-2 mb-4">
-                    <a href="https://www.facebook.com/d1g1mex?locale=es_LA" target="_blank"
-                        class="text-2xl hover:scale-110 transition-transform duration-150" title="Facebook"
-                        style="color: #1877F2;">
-                        <i class="fab fa-facebook-square"></i>
+                <!-- Marca -->
+                <div class="lg:col-span-1">
+                    <a href="{{ '/' | relative_url }}" class="text-2xl font-extrabold logo-font group inline-block mb-4">
+                        <span class="text-sky-400 group-hover:text-sky-300 transition-colors duration-300">< /</span>
+                        <span class="text-white">DIGIMEX</span>
+                        <span class="text-sky-400 group-hover:text-sky-300 transition-colors duration-300">></span>
                     </a>
-                    <a href="https://www.youtube.com/@digitalizaci0nm3xic0" target="_blank"
-                        class="text-2xl hover:scale-110 transition-transform duration-150" title="YouTube"
-                        style="color: #FF0000;">
-                        <i class="fab fa-youtube-square"></i>
-                    </a>
-                    <a href="https://m.me/d1g1mex" target="_blank"
-                        class="text-2xl hover:scale-110 transition-transform duration-150" title="Messenger"
-                        style="color: #00B2FF;">
-                        <i class="fab fa-facebook-messenger"></i>
-                    </a>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                        Reparación de PC y laptop a nivel componente, licencias de Office originales y diseño web
+                        profesional para tu negocio.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/d1g1mex?locale=es_LA" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-blue-600 flex items-center justify-center transition-colors duration-200" title="Facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@digitalizaci0nm3xic0" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-red-600 flex items-center justify-center transition-colors duration-200" title="YouTube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://m.me/d1g1mex" target="_blank"
+                            class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-sky-500 flex items-center justify-center transition-colors duration-200" title="Messenger" aria-label="Messenger">
+                            <i class="fab fa-facebook-messenger"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <p class="text-sm text-slate-600 mt-2">Copyrights 2025 © Desarrollo de páginas web</p>
-                <a href="{{ '/aviso-de-privacidad/' | relative_url }}"
-                    class="text-xs text-slate-600 hover:text-blue-600 mt-2 block transition duration-150">Aviso de
-                    Privacidad</a>
+                <!-- Navegación -->
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Navegación</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="{{ '/' | relative_url }}" class="hover:text-white transition-colors duration-150">Inicio</a></li>
+                        <li><a href="{{ '/galeria-reparaciones/' | relative_url }}" class="hover:text-white transition-colors duration-150">Reparaciones</a></li>
+                        <li><a href="{{ '/tienda/' | relative_url }}" class="hover:text-white transition-colors duration-150">Tienda de artículos</a></li>
+                        <li><a href="{{ '/blog/' | relative_url }}" class="hover:text-white transition-colors duration-150">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Servicios -->
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Servicios</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="{{ '/licencias-office/' | relative_url }}" class="hover:text-white transition-colors duration-150">Licencias Office</a></li>
+                        <li><a href="{{ '/servicios-digitales/' | relative_url }}" class="hover:text-white transition-colors duration-150">Landing Pages</a></li>
+                        <li><a href="{{ '/portafolio-diseno/' | relative_url }}" class="hover:text-white transition-colors duration-150">Portafolio Web</a></li>
+                        <li><a href="{{ '/galeria-reparaciones/' | relative_url }}" class="hover:text-white transition-colors duration-150">Galería de trabajos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contacto</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-envelope mt-1 text-sky-400"></i>
+                            <a href="mailto:digitalmex@proton.me" class="hover:text-white transition-colors duration-150">digitalmex@proton.me</a>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fab fa-facebook-messenger mt-1 text-sky-400"></i>
+                            <a href="https://m.me/d1g1mex" target="_blank" class="hover:text-white transition-colors duration-150">Escríbenos por Messenger</a>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-location-dot mt-1 text-sky-400"></i>
+                            <span>Ciudad de México, México</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+                <p>© {{ 'now' | date: "%Y" }} DIGIMEX. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-5">
+                    <a href="{{ '/aviso-de-privacidad/' | relative_url }}" class="hover:text-slate-300 transition-colors duration-150">Aviso de Privacidad</a>
+                    <a href="https://m.me/d1g1mex" target="_blank" class="hover:text-slate-300 transition-colors duration-150">Contacto</a>
+                </div>
             </div>
         </div>
     </footer>
