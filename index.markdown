@@ -11,8 +11,8 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
 <section class="relative overflow-hidden">
     <!-- Imagen de fondo: cubre todo el hero de borde a borde -->
     <div class="absolute inset-0">
-        <img src="{{ '/img/repair_hero.png' | relative_url }}" alt="Reparación de PC y Laptop a nivel componente"
-             class="w-full h-full object-cover object-center" loading="eager">
+        <img src="{{ '/img/repair_hero.webp' | relative_url }}" alt="Reparación de PC y Laptop a nivel componente"
+             class="w-full h-full object-cover object-center" loading="eager" width="1024" height="1024">
         <!-- Degradados azules para que el texto se lea bien -->
         <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/90 to-cyan-900/80" aria-hidden="true"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-blue-950/50 to-blue-900/60" aria-hidden="true"></div>
@@ -130,7 +130,7 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
                 <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 font-bold">M</div>
-                        <h4 class="font-bold text-slate-900 text-sm">Monica S</h4>
+                        <h3 class="font-bold text-slate-900 text-sm">Monica S</h3>
                     </div>
                     <p class="text-gray-600 text-xs italic leading-relaxed">
                         "Excelente servicio. Recomiendo por qué es gente honesta..."
@@ -139,7 +139,7 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
                 <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 bg-cyan-500/10 rounded-full flex items-center justify-center text-cyan-600 font-bold">A</div>
-                        <h4 class="font-bold text-slate-900 text-sm">Adrián GR GT</h4>
+                        <h3 class="font-bold text-slate-900 text-sm">Adrián GR GT</h3>
                     </div>
                     <p class="text-gray-600 text-xs italic leading-relaxed">
                         "Muy buena atención, muy profesional te explican que es lo que tiene el equipo..."
@@ -148,7 +148,7 @@ keywords: "reparación de pc, soporte técnico, reparación a nivel componente, 
                 <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-4">
                         <div class="w-10 h-10 bg-blue-700/10 rounded-full flex items-center justify-center text-blue-700 font-bold">H</div>
-                        <h4 class="font-bold text-slate-900 text-sm">Hanoch Michel</h4>
+                        <h3 class="font-bold text-slate-900 text-sm">Hanoch Michel</h3>
                     </div>
                     <p class="text-gray-600 text-xs italic leading-relaxed">
                         "Muy profesional el servicio, honestidad y calidad. Lo recomiendo al 100%..."

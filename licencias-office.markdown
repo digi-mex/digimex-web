@@ -56,7 +56,7 @@ permalink: /licencias-office/
                 </div>
                 <!-- Office 2024 (destacado, al frente) -->
                 <div class="relative drop-shadow-2xl transition-transform duration-300 hover:-translate-y-2 z-10">
-                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white bg-sky-400 rounded-full px-3 py-1.5 shadow-lg shadow-sky-900/40 z-20 whitespace-nowrap">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white bg-blue-600 rounded-full px-3 py-1.5 shadow-lg shadow-sky-900/40 z-20 whitespace-nowrap">
                         Más vendido
                     </span>
                     <img src="{{ '/img/office/office-2024.svg' | relative_url }}" alt="Microsoft Office 2024 Pro Plus" class="w-full h-auto">
@@ -99,7 +99,7 @@ permalink: /licencias-office/
             <article class="relative flex flex-col sm:flex-row gap-8 bg-white border rounded-3xl p-8 sm:p-10 transition-all duration-300 hover:shadow-xl {% if licencia.destaque %}border-sky-300 ring-2 ring-sky-500/20 shadow-lg shadow-sky-100{% else %}border-gray-200 shadow-sm shadow-gray-100 hover:border-blue-300{% endif %}">
 
                 {% if licencia.destaque %}
-                <span class="absolute -top-3 left-8 text-[11px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full px-4 py-1.5 shadow-lg shadow-sky-500/30">
+                <span class="absolute -top-3 left-8 text-[11px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-blue-600 to-sky-600 rounded-full px-4 py-1.5 shadow-lg shadow-blue-600/30">
                     Más vendido
                 </span>
                 {% endif %}
@@ -167,32 +167,32 @@ permalink: /licencias-office/
                     <tr class="border-b border-gray-200 bg-gray-50/70">
                         <th class="py-5 px-6 font-bold text-slate-500"></th>
                         <th class="py-5 px-6 font-extrabold text-slate-900">Office 2019</th>
-                        <th class="py-5 px-6 font-extrabold text-sky-600 bg-sky-50/60">Office 2024 <span class="text-[10px] align-top">★</span></th>
+                        <th class="py-5 px-6 font-extrabold text-blue-700 bg-sky-50/60">Office 2024 <span class="text-[10px] align-top">★</span></th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
                     <tr>
-                        <td class="py-4 px-6 text-gray-500">Tipo de licencia</td>
+                        <th scope="row" class="py-4 px-6 text-gray-500 text-left font-medium">Tipo de licencia</td>
                         <td class="py-4 px-6 font-semibold text-slate-800">Permanente, pago único</td>
                         <td class="py-4 px-6 font-semibold text-slate-800 bg-sky-50/40">Permanente, pago único</td>
                     </tr>
                     <tr>
-                        <td class="py-4 px-6 text-gray-500">Aplicaciones</td>
+                        <th scope="row" class="py-4 px-6 text-gray-500 text-left font-medium">Aplicaciones</td>
                         <td class="py-4 px-6 text-slate-800">Word, Excel, PowerPoint, Outlook y más</td>
                         <td class="py-4 px-6 text-slate-800 bg-sky-50/40">Word, Excel, PowerPoint, Outlook y más</td>
                     </tr>
                     <tr>
-                        <td class="py-4 px-6 text-gray-500">Actualidad</td>
+                        <th scope="row" class="py-4 px-6 text-gray-500 text-left font-medium">Actualidad</td>
                         <td class="py-4 px-6 text-slate-800">Versión clásica y estable</td>
                         <td class="py-4 px-6 font-semibold text-slate-800 bg-sky-50/40">Última versión de Office</td>
                     </tr>
                     <tr>
-                        <td class="py-4 px-6 text-gray-500">Dispositivo</td>
+                        <th scope="row" class="py-4 px-6 text-gray-500 text-left font-medium">Dispositivo</td>
                         <td class="py-4 px-6 text-slate-800">1 PC o Mac</td>
                         <td class="py-4 px-6 text-slate-800 bg-sky-50/40">1 PC o Mac</td>
                     </tr>
                     <tr>
-                        <td class="py-4 px-6 text-gray-500">Entrega</td>
+                        <th scope="row" class="py-4 px-6 text-gray-500 text-left font-medium">Entrega</td>
                         <td class="py-4 px-6 text-slate-800">Correo el mismo día</td>
                         <td class="py-4 px-6 text-slate-800 bg-sky-50/40">Correo el mismo día</td>
                     </tr>
