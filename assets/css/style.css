@@ -87,10 +87,10 @@ html {
 
 /* --- HEADER & NAVIGATION --- */
 .header-nav {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(37, 99, 235, 0.12);
-    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
 }
 
 .nav-link-in-plate {
@@ -124,8 +124,8 @@ html {
 
 .nav-link-text:hover,
 .nav-link-text.active {
-    color: #2563eb !important;
-    background-color: #eff6ff;
+    color: #0f172a !important;
+    background-color: #f1f5f9;
 }
 
 .nav-link-text.active::after {
@@ -136,7 +136,7 @@ html {
     bottom: 2px;
     height: 2px;
     border-radius: 2px;
-    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    background: #0f172a;
 }
 
 /* Enlace solo ícono para pantallas medianas */
@@ -157,8 +157,8 @@ html {
 
 .nav-link-icon:hover,
 .nav-link-icon.active {
-    color: #2563eb;
-    background-color: #eff6ff;
+    color: #0f172a;
+    background-color: #f1f5f9;
 }
 
 .nav-link-in-plate i {
@@ -168,8 +168,8 @@ html {
 }
 
 .nav-link-in-plate:hover {
-    background-color: #eff6ff;
-    color: #2563eb !important;
+    background-color: #f1f5f9;
+    color: #0f172a !important;
 }
 
 .nav-link-in-plate:hover i {
@@ -199,9 +199,9 @@ html {
 .dropdown-menu-card {
     min-width: 220px;
     background: #ffffff;
-    border: 1px solid rgba(37, 99, 235, 0.14);
+    border: 1px solid #e2e8f0;
     border-radius: 14px;
-    box-shadow: 0 16px 36px rgba(37, 99, 235, 0.16);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
     padding: 8px;
     display: flex;
     flex-direction: column;
@@ -223,18 +223,18 @@ html {
 
 .dropdown-menu-link:hover,
 .dropdown-menu-link.active {
-    background: #eff6ff;
-    color: #2563eb;
+    background: #f1f5f9;
+    color: #0f172a;
 }
 
 .dropdown-menu-link i {
     width: 18px;
     text-align: center;
-    color: #2563eb;
+    color: #64748b;
     font-size: 0.85rem;
 }
 
-/* Botón CTA de navegación (Contacto) — degradado azul */
+/* Botón CTA de navegación (Contacto) — sólido oscuro */
 .nav-cta {
     display: inline-flex;
     align-items: center;
@@ -244,16 +244,16 @@ html {
     font-size: 0.85rem;
     font-weight: 700;
     color: #ffffff;
-    background: linear-gradient(90deg, #2563eb, #38bdf8);
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    background: #0f172a;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
     transition: all 0.25s ease;
     white-space: nowrap;
 }
 
 .nav-cta:hover {
-    background: linear-gradient(90deg, #1d4ed8, #0ea5e9);
+    background: #1e293b;
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.3);
     color: #ffffff;
 }
 
@@ -431,9 +431,9 @@ html {
 
 .ba-label-despues {
     left: 12px;
-    background: rgba(37, 99, 235, 0.92);
+    background: rgba(15, 23, 42, 0.92);
     color: #ffffff;
-    border: 1px solid rgba(147, 197, 253, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.4);
 }
 
 .ba-label-antes {
@@ -470,15 +470,15 @@ html {
     height: 38px;
     border-radius: 999px;
     background: #ffffff;
-    border: 2px solid #2563eb;
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+    border: 2px solid #0f172a;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .ba-handle i {
     position: relative;
     z-index: 1;
-    color: #2563eb;
+    color: #0f172a;
     font-size: 0.8rem;
     pointer-events: none;
     transition: color 0.2s ease;
@@ -488,8 +488,8 @@ html {
 .ba-dragging .ba-handle::before,
 .ba-handle:focus-visible::before {
     transform: scale(1.12);
-    background: #2563eb;
-    border-color: #2563eb;
+    background: #0f172a;
+    border-color: #0f172a;
 }
 
 .ba-handle:hover i,
@@ -499,12 +499,12 @@ html {
 }
 
 .ba-handle:focus-visible {
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.35);
 }
 
 /* Sutil resplandor al arrastrar */
 .ba-dragging .ba-after-wrap {
-    filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.2));
+    filter: drop-shadow(0 0 12px rgba(148, 163, 184, 0.35));
 }
 
 /* --- Botones de filtro --- */
@@ -524,17 +524,17 @@ html {
 }
 
 .gallery-filter-btn:hover {
-    color: #2563eb;
-    border-color: #93c5fd;
+    color: #0f172a;
+    border-color: #cbd5e1;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.12);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
 }
 
 .gallery-filter-btn.active {
     color: #ffffff;
-    background: #2563eb;
-    border-color: #2563eb;
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    background: #0f172a;
+    border-color: #0f172a;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.35);
 }
 
 /* --- Micro-interacción de entrada de tarjetas --- */
@@ -652,13 +652,13 @@ html {
 }
 
 .blog-content a {
-    color: #2563eb;
+    color: #0f172a;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
 .blog-content a:hover {
-    color: #1d4ed8;
+    color: #334155;
 }
 
 .blog-content strong {
@@ -666,8 +666,8 @@ html {
 }
 
 .blog-content blockquote {
-    border-left: 4px solid #2563eb;
-    background: #eff6ff;
+    border-left: 4px solid #cbd5e1;
+    background: #f8fafc;
     padding: 1rem 1.25rem;
     border-radius: 0 0.75rem 0.75rem 0;
     font-style: italic;
@@ -681,7 +681,7 @@ html {
     padding: 0.15rem 0.4rem;
     border-radius: 0.35rem;
     font-size: 0.9em;
-    color: #1e3a8a;
+    color: #334155;
 }
 
 .blog-content pre {

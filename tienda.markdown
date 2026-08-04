@@ -1,24 +1,26 @@
 ---
 layout: default
 title: "Tienda de artículos"
-description: "Artículos disponibles de DIGIMEX: equipos, componentes y productos en venta."
-keywords: "tienda, artículos, venta, equipos, componentes, DIGIMEX"
+description: "Artículos disponibles de DIGIMEX: equipos y productos en venta con descripción completa."
+keywords: "tienda, artículos, venta, equipos, DIGIMEX"
 permalink: /tienda/
 ---
 
 <!-- ============================================================
      ENCABEZADO
      ============================================================ -->
-<section class="bg-gradient-to-br from-blue-800 via-blue-700 to-sky-600">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
-        <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sky-200 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-            <i class="fas fa-store"></i> Tienda DIGIMEX
-        </span>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">
-            Artículos <span class="text-sky-300">disponibles</span>
-        </h1>
-        <p class="text-blue-100 text-lg max-w-xl mx-auto leading-relaxed">
-            Equipos y componentes en venta. Pregunta por cualquier artículo por Messenger.
+<section class="bg-slate-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.06] pointer-events-none"
+         style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 26px 26px;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div class="flex items-center gap-2 mb-4">
+            <i class="fas fa-store text-slate-400 text-sm"></i>
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Tienda DIGIMEX</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">Artículos disponibles</h1>
+        <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+            Equipos revisados y en buen estado. Pregunta por cualquier artículo por Messenger y
+            resolvemos todas tus dudas.
         </p>
     </div>
 </section>
@@ -26,67 +28,84 @@ permalink: /tienda/
 <!-- ============================================================
      GRID DE ARTÍCULOS
      ============================================================ -->
-<section class="bg-white py-16 sm:py-24">
+<section class="bg-slate-50 py-14 sm:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {% assign articulos = site.data.tienda.articulos %}
 
         {% if articulos.size > 0 %}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for a in articulos %}
             {% assign msg = 'Hola, me interesa: ' | append: a.nombre | url_encode %}
-            <article class="group bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col">
+            <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
+
+                <!-- Imagen o marcador de posición -->
                 {% if a.imagen and a.imagen != "" %}
-                <div class="relative aspect-[4/3] overflow-hidden bg-blue-50">
+                <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
                     <img src="{{ a.imagen | relative_url }}" alt="{{ a.nombre }}" loading="lazy"
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
                     {% if a.etiqueta %}
-                    <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-blue-600 to-sky-500 rounded-full px-3 py-1.5 shadow-lg">
+                    <span class="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider text-slate-700 bg-white/90 border border-slate-200 rounded-full px-3 py-1">
                         {{ a.etiqueta }}
+                    </span>
+                    {% endif %}
+                    {% if a.condicion %}
+                    <span class="absolute top-3 right-3 text-[11px] font-semibold uppercase tracking-wider text-white rounded-full px-3 py-1
+                        {% if a.condicion == 'nuevo' %}bg-emerald-600
+                        {% elsif a.condicion == 'usado' %}bg-amber-500
+                        {% elsif a.condicion == 'reacondicionado' %}bg-orange-500
+                        {% else %}bg-slate-500{% endif %}">
+                        {{ a.condicion }}
                     </span>
                     {% endif %}
                 </div>
                 {% else %}
-                <div class="relative aspect-[4/3] bg-gradient-to-br from-blue-50 to-sky-50 flex items-center justify-center">
-                    <i class="fas fa-box-open text-blue-200 text-6xl"></i>
+                <div class="relative aspect-[4/3] bg-slate-100 flex flex-col items-center justify-center gap-3">
+                    <i class="fas fa-box-open text-slate-300 text-5xl"></i>
                     {% if a.etiqueta %}
-                    <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-blue-600 to-sky-500 rounded-full px-3 py-1.5 shadow-lg">
+                    <span class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 bg-white border border-slate-200 rounded-full px-3 py-1">
                         {{ a.etiqueta }}
+                    </span>
+                    {% endif %}
+                    {% if a.condicion %}
+                    <span class="text-[11px] font-semibold uppercase tracking-wider text-white rounded-full px-3 py-1
+                        {% if a.condicion == 'nuevo' %}bg-emerald-600
+                        {% elsif a.condicion == 'usado' %}bg-amber-500
+                        {% elsif a.condicion == 'reacondicionado' %}bg-orange-500
+                        {% else %}bg-slate-500{% endif %}">
+                        {{ a.condicion }}
                     </span>
                     {% endif %}
                 </div>
                 {% endif %}
 
                 <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-start justify-between gap-3 mb-2">
-                        <h2 class="text-lg font-bold text-slate-900 leading-snug">{{ a.nombre }}</h2>
-                        {% if a.precio %}
-                        <span class="text-lg font-extrabold text-blue-600 whitespace-nowrap">{{ a.precio }}</span>
-                        {% endif %}
-                    </div>
-                    {% if a.descripcion %}
-                    <p class="text-sm text-gray-600 leading-relaxed mb-3 line-clamp-2">{{ a.descripcion }}</p>
+                    {% if a.marca or a.modelo %}
+                    <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">
+                        {% if a.marca %}{{ a.marca }}{% endif %}{% if a.marca and a.modelo %} · {% endif %}{% if a.modelo %}{{ a.modelo }}{% endif %}
+                    </p>
                     {% endif %}
+                    <h2 class="text-lg font-bold text-slate-900 leading-snug mb-2">{{ a.nombre }}</h2>
 
+                    {% if a.precio %}
+                    <p class="text-2xl font-extrabold text-slate-900 mb-1">{{ a.precio }}</p>
+                    {% endif %}
                     {% if a.detalles %}
-                    <details class="group mb-5">
-                        <summary class="cursor-pointer text-sm font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-2">
-                            <i class="fas fa-chevron-right text-[10px] transition-transform duration-200 group-open:rotate-90"></i>
-                            Ver especificaciones
-                        </summary>
-                        <div class="mt-3 bg-gray-50 border border-gray-200 rounded-xl p-4 text-xs text-gray-600 leading-relaxed whitespace-pre-wrap">{{ a.detalles | escape }}</div>
-                    </details>
+                    <p class="text-sm text-slate-600 leading-relaxed mt-3 mb-6 whitespace-pre-wrap">{{ a.detalles | escape }}</p>
+                    {% elsif a.descripcion %}
+                    <p class="text-sm text-slate-600 leading-relaxed mt-3 mb-6">{{ a.descripcion }}</p>
                     {% endif %}
 
-                    <div class="mt-auto space-y-3">
+                    <div class="mt-auto pt-4 border-t border-slate-100 space-y-2.5">
                         <a href="https://m.me/d1g1mex?text={{ msg }}" target="_blank"
-                           class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/20">
+                           class="inline-flex items-center justify-center gap-2.5 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-xl transition-colors duration-300">
                             <i class="fab fa-facebook-messenger"></i> Preguntar por este artículo
                         </a>
-                        {% if a.enlace %}
+                        {% if a.enlace != "" %}
                         <a href="{{ a.enlace }}" target="_blank" rel="noopener"
-                           class="inline-flex items-center justify-center gap-2 w-full border border-gray-300 hover:border-blue-400 text-gray-600 hover:text-blue-700 font-semibold py-2.5 px-6 rounded-xl transition-all duration-300">
-                            <i class="fas fa-external-link-alt"></i> Ver publicación
+                           class="inline-flex items-center justify-center gap-2 w-full bg-[#FFE600] hover:bg-[#E6CF00] text-[#2D3277] font-bold py-2.5 px-5 rounded-xl transition-colors duration-300 shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.933 16.933" class="h-5 w-5 shrink-0" aria-hidden="true"><defs><style>.ml-1{fill:#2d3277}.ml-2{fill:#fff}.ml-3{fill:#ffd100}</style></defs><g transform="scale(.13168)"><g transform="translate(-37.295 20.094)scale(1.57694)"><path d="M105.19 26.67C105.19 12 86.94 0 64.42 0S23.65 12 23.65 26.67v1.56c0 15.59 16 28.21 40.77 28.21 25 0 40.78-12.62 40.78-28.21z" class="ml-1"/><path d="M103.63 26.65c0 13.85-17.55 25.08-39.2 25.08S25.22 40.5 25.22 26.65 42.77 1.57 64.43 1.57s39.2 11.23 39.2 25.08" class="ml-3"/><path d="M51.41 18.74s-.41.45-.16.77c.62.79 2.53 1.24 4.46.81 1.15-.26 2.63-1.43 4.06-2.56a15.9 15.9 0 0 1 4.62-3 5.23 5.23 0 0 1 3.38-.09 10.1 10.1 0 0 1 3.07 1.79c2.69 2 13.47 11.43 15.34 13.06A93 93 0 0 1 103.41 24c-.78-4.83-3.72-9.25-8.18-12.87-6.22 2.61-13.81 4-21.23.34a20.8 20.8 0 0 0-8-1.82c-5.89.14-8.44 2.69-11.14 5.39z" class="ml-2"/><path d="M85.74 30.59c-.13-.11-12.68-11.09-15.53-13.23a6.86 6.86 0 0 0-3.52-1.67 4.6 4.6 0 0 0-1.68.16 15.2 15.2 0 0 0-4.59 2.73c-1.59 1.27-3.09 2.46-4.48 2.77a7.24 7.24 0 0 1-4.94-.74 2.2 2.2 0 0 1-.82-.9 1.53 1.53 0 0 1 .42-1.64l3.47-3.75 1.22-1.2a23 23 0 0 0-3.16.71 13.5 13.5 0 0 1-3.68.69 35 35 0 0 1-3.76-.59 55.3 55.3 0 0 1-10-3.61c-4.93 3.67-8.22 8.25-9.17 13.3.71.19 1.85.53 2.33.64 11.14 2.47 14.61 5 15.24 5.56a3.69 3.69 0 0 1 5.79.34 4.25 4.25 0 0 1 2.66-.93 4.8 4.8 0 0 1 1.59.28 3.6 3.6 0 0 1 2.24 2 3.7 3.7 0 0 1 1.55-.33 4.7 4.7 0 0 1 1.86.41A4 4 0 0 1 61 36h.44a4.42 4.42 0 0 1 4.42 4.42 4.3 4.3 0 0 1-.53 2.09 7.1 7.1 0 0 0 3.84 1 2.43 2.43 0 0 0 1.79-.79c.11-.15.23-.34.12-.47l-3.17-3.45s-.52-.49-.35-.68.5.08.72.27c1.61 1.34 3.56 3.36 3.56 3.36s.16.27.88.4a3.22 3.22 0 0 0 2.49-.58 4 4 0 0 0 .55-.55 1.66 1.66 0 0 0-.13-2.02L72 34.85s-.53-.49-.35-.68.5.09.73.28c1.16 1 2.81 2.62 4.38 4.16a3 3 0 0 0 3.52-.12 2.53 2.53 0 0 0 1.31-2.3 2.65 2.65 0 0 0-.78-1.54l-5-5s-.53-.45-.35-.68.5.08.73.27c1.59 1.34 5.92 5.31 5.92 5.31a3.06 3.06 0 0 0 3.4-.07 2.3 2.3 0 0 0 1.12-1.8 2.69 2.69 0 0 0-.89-2.09" class="ml-2"/><path d="M61.41 37a11.6 11.6 0 0 0-1.74.38c-.06 0 0-.35.12-.53s1.1-3.26-1.4-4.33a2.94 2.94 0 0 0-3.48.52c-.1.11-.15.1-.16 0a2.75 2.75 0 0 0-1.94-2.56A3.76 3.76 0 0 0 48.56 32a2.72 2.72 0 1 0-.81 2.32.11.11 0 0 1 0 .09A3.58 3.58 0 0 0 50 38.49a2.66 2.66 0 0 0 2.64-.4c.21-.16.25-.09.22.11-.1.63 0 2 1.92 2.76a2.47 2.47 0 0 0 2.86-.53c.24-.23.31-.19.32.15A3.44 3.44 0 1 0 61.41 37" class="ml-2"/><path d="M86.22 29.28c-3.86-3.38-12.8-11.15-15.22-13a10.8 10.8 0 0 0-3.16-1.84 5.2 5.2 0 0 0-1.55-.24 6.5 6.5 0 0 0-2 .33 16 16 0 0 0-4.64 2.93l-.07.06c-1.41 1.12-2.86 2.27-4 2.52a6.5 6.5 0 0 1-1.46.16 3.74 3.74 0 0 1-2.75-.88c-.07-.09 0-.23.13-.43l3.5-3.66c2.66-2.66 5.18-5.18 11-5.31h.29a20.6 20.6 0 0 1 7.62 1.81 23.7 23.7 0 0 0 10.38 2.49 27.2 27.2 0 0 0 11.4-2.73c-.45-.38-.91-.74-1.38-1.09a25.15 25.15 0 0 1-10 2.27 22 22 0 0 1-9.71-2.34 21.9 21.9 0 0 0-8.3-2H66a14.38 14.38 0 0 0-9.45 3.35 19.2 19.2 0 0 0-4.72.86 13 13 0 0 1-3.32.64h-1.27a65.5 65.5 0 0 1-12-3.31c-.48.34-1 .7-1.41 1.06 5 2 11 3.62 13 3.74.53 0 1.1.1 1.66.1a13.8 13.8 0 0 0 3.75-.7c.73-.2 1.52-.42 2.36-.58-.22.22-.45.44-.67.67l-3.5 3.74a1.73 1.73 0 0 0-.43 1.91 2.44 2.44 0 0 0 .91 1 7.23 7.23 0 0 0 3.67.93 6.7 6.7 0 0 0 1.42-.15c1.45-.32 3-1.53 4.58-2.81a15.3 15.3 0 0 1 4.5-2.7 5.5 5.5 0 0 1 1.26-.17h.32a6.8 6.8 0 0 1 3.41 1.63c2.83 2.13 15.39 13.11 15.51 13.22a2.44 2.44 0 0 1 .76 1.85 2 2 0 0 1-1 1.6 3 3 0 0 1-1.64.51 2.7 2.7 0 0 1-1.46-.42s-4.35-4-5.93-5.31a1.3 1.3 0 0 0-.74-.39.4.4 0 0 0-.33.15c-.25.31 0 .73.35 1l5 5.06a2.27 2.27 0 0 1 .69 1.36 2.3 2.3 0 0 1-1.19 2.08 3.23 3.23 0 0 1-1.78.59 2.5 2.5 0 0 1-1.43-.44l-.72-.71c-1.32-1.29-2.68-2.63-3.68-3.46a1.28 1.28 0 0 0-.75-.39.4.4 0 0 0-.31.13c-.12.13-.2.35.09.73a1.6 1.6 0 0 0 .25.28l3.67 4.12a1.42 1.42 0 0 1 .08 1.76l-.13.17a3 3 0 0 1-.34.32 2.9 2.9 0 0 1-1.79.57 2.6 2.6 0 0 1-.5 0 1.35 1.35 0 0 1-.72-.3c-.2-.21-2-2.1-3.57-3.37a1.3 1.3 0 0 0-.72-.38.45.45 0 0 0-.33.14c-.3.34.15.83.35 1l3.12 3.45a.7.7 0 0 1-.11.21c-.12.16-.5.54-1.63.68a3 3 0 0 1-.42 0 7.2 7.2 0 0 1-3.06-.9 4.56 4.56 0 0 0 .45-2 4.68 4.68 0 0 0-4.67-4.67h-.16a4.15 4.15 0 0 0-2.37-4.38 4.8 4.8 0 0 0-2-.43 4 4 0 0 0-1.43.25 4 4 0 0 0-2.29-1.94 5.2 5.2 0 0 0-1.65-.28 4.4 4.4 0 0 0-2.61.84 3.91 3.91 0 0 0-5.85-.33c-1-.75-4.84-3.2-15.18-5.55-.5-.11-1.65-.44-2.35-.65a16 16 0 0 0-.27 1.7l2.29.54c10.56 2.34 14 4.78 14.63 5.24a4.2 4.2 0 0 0-.3 1.52 4 4 0 0 0 4 4 4.4 4.4 0 0 0 .72-.06 4.63 4.63 0 0 0 3 3.45 3.8 3.8 0 0 0 2.31.16 4.1 4.1 0 0 0 2.45 2.29 4.2 4.2 0 0 0 1.56.32 3.6 3.6 0 0 0 1.21-.21 4.66 4.66 0 0 0 7.65 1.48 8.8 8.8 0 0 0 4 1.17 6 6 0 0 0 .6 0 3.62 3.62 0 0 0 2.6-1.4 2 2 0 0 0 .16-.27 4.5 4.5 0 0 0 1.27.2 4.23 4.23 0 0 0 2.57-.92 3.5 3.5 0 0 0 1.51-2.19 4 4 0 0 0 .86.09 4.76 4.76 0 0 0 2.63-.86 3.77 3.77 0 0 0 1.88-3.37 5 5 0 0 0 .87.09 4.5 4.5 0 0 0 2.45-.76 3.58 3.58 0 0 0 1.71-2.78 3.76 3.76 0 0 0-.54-2.24 100 100 0 0 1 16.29-5.1c0-.57-.13-1.14-.23-1.69a93.4 93.4 0 0 0-17.21 5.57M61.41 43.62a3.17 3.17 0 0 1-3.19-3c0-.15 0-.54-.35-.54a.64.64 0 0 0-.39.2 2.2 2.2 0 0 1-1.56.71 2.7 2.7 0 0 1-1-.22c-1.82-.74-1.85-2-1.78-2.49a.45.45 0 0 0-.06-.38l-.11-.1h-.12a.53.53 0 0 0-.31.12 2.67 2.67 0 0 1-1.55.55 2.4 2.4 0 0 1-.86-.16A3.34 3.34 0 0 1 48 34.39a.35.35 0 0 0-.1-.32l-.17-.14-.16.16a2.49 2.49 0 1 1 .75-2.09l.08.67.37-.57a3.65 3.65 0 0 1 2.89-1.58 3.4 3.4 0 0 1 1.08.17A2.51 2.51 0 0 1 54.51 33c0 .32.25.34.3.34a.43.43 0 0 0 .29-.15 2.5 2.5 0 0 1 1.83-.77 3.4 3.4 0 0 1 1.37.31c2.34 1 1.28 4 1.27 4-.21.49-.21.71 0 .83l.09.05h.07a2 2 0 0 0 .45-.12 4 4 0 0 1 1.25-.28 3.24 3.24 0 0 1 3.2 3.2 3.2 3.2 0 0 1-3.22 3.21" class="ml-1"/></g></g></svg>
+                            <span>Comprar en Mercado Libre</span>
                         </a>
                         {% endif %}
                     </div>
@@ -96,17 +115,17 @@ permalink: /tienda/
         </div>
         {% else %}
         <!-- Estado vacío: aún no hay artículos cargados -->
-        <div class="max-w-lg mx-auto text-center bg-gray-50 border border-gray-200 rounded-3xl p-10 sm:p-14">
-            <span class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-3xl">
+        <div class="max-w-lg mx-auto text-center bg-white border border-slate-200 rounded-2xl p-10 sm:p-14 shadow-sm">
+            <span class="w-16 h-16 mx-auto mb-6 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-2xl">
                 <i class="fas fa-box-open"></i>
             </span>
             <h2 class="text-2xl font-extrabold text-slate-900 mb-3">Estamos preparando la tienda</h2>
-            <p class="text-gray-600 leading-relaxed mb-8">
+            <p class="text-slate-600 leading-relaxed mb-8">
                 Pronto publicaremos los artículos disponibles. Mientras tanto, escríbenos y te decimos qué tenemos.
             </p>
             <a href="https://m.me/d1g1mex?text=Hola, ¿qué artículos tienen disponibles?"
                target="_blank"
-               class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-sky-500 to-cyan-400 hover:from-sky-600 hover:to-cyan-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-sky-500/25 transition-all duration-300">
+               class="inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-300">
                 <i class="fab fa-facebook-messenger"></i> Preguntar por Messenger
             </a>
         </div>

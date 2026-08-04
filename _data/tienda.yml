@@ -2,22 +2,18 @@
 # NO lo edites a mano: se sobrescribe con el contenido de la hoja
 # de cálculo. Edita la hoja y vuelve a ejecutar el script.
 #
-# Campos de cada artículo: nombre, precio, imagen, enlace, descripcion, detalles, etiqueta.
+# Campos de cada artículo: nombre, precio, imagen, enlace, descripcion, detalles, etiqueta, marca, modelo, condicion.
 articulos:
-  - nombre: Computadora PC CPU Acer Veriton X2631G Core i3 8GB 500GB Win 10
-    precio: 1350 MXN
-    imagen: ""
-    enlace: "https://www.facebook.com/marketplace/item/1939604143561377/?ref=marketplace_profile&referral_code=undefined"
-    descripcion: PC Escritorio Acer Veriton X2631G – 8GB RAM – Más Rápida
-    etiqueta: usado
+  - nombre: Computadora PC  Acer Veriton X2631G Core i3
+    precio: $ 1350 MXN
+    imagen: "https://lh3.googleusercontent.com/d/1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g=w1200"
+    enlace: "https://articulo.mercadolibre.com.mx/MLM-3125028003-pc-acer-x2631g-_JM?matt_tool=17030900&ua=P5QlGrJuyYFM6FAvqjpU-S6I_0R76kqKNhFHy1woEJ2fkzc#origin=share&sid=share&action=copy"
+    descripcion: "ESPECIFICACIONES:"
+    etiqueta: ""
+    marca: Acer
+    modelo: Veriton X2631G
+    condicion: usado
     detalles: |-
-      PC Escritorio Acer Veriton X2631G – 8GB RAM – Más Rápida
-
-      disponible en mercado libre
-
-      🛡️ Garantía 30 días | ✅ Funcionando al 100%
-      ⭐ VERSIÓN 8GB RAM – Ideal para multitarea
-
       🔧 ESPECIFICACIONES:
       * Marca: Acer
       * Modelo: Veriton X2631G
@@ -30,50 +26,17 @@ articulos:
 
       ✅ INCLUYE: CPU (gabinete) con Windows 10 instalado
       ❌ NO INCLUYE: Cable de corriente, cable VGA, monitor,
-         teclado ni mouse
-
-      💡 IDEAL PARA:
-      ✔️ Oficina con varios programas abiertos a la vez
-      ✔️ Punto de venta con sistema de facturación
-      ✔️ Trabajos escolares, investigación, tesis
-      ✔️ Navegación pesada (muchas pestañas de Chrome)
-      ✔️ Office / contabilidad / diseño ligero
-
-      💪 ¿POR QUÉ 8GB?
-      Con 8GB puedes tener Chrome + Excel + facturación abiertos
-      al mismo tiempo sin que se trabe. Con 4GB ya no es posible.
-
-      💰 $1350 MXN – acepto ofertas razonables
-      📩 Escríbeme por Messenger, respondo rápido
-
-      ━━━━━━━━━━━━━━━━━━━━━━
-      📍 ENTREGO EN PERSONA (sin costo extra):
-
-      🚌 Mexibús L4: UMB → Tulpetlac
-      🚌 Mexibús L1: Cd. Azteca → Industrial
-      🚇 Metro Línea B: Cd. Azteca → Río de los Remedios
-      📦 Central de Abasto
-
-      ⏰ Acordamos día y hora por Messenger ✔️
-      ━━━━━━━━━━━━━━━━━━━━━━
-
-      💡 También tengo versión con 4GB RAM por $1100
-         si buscas algo más económico.
-
-      🔎 computadora escritorio, pc oficina, desktop, acer, intel i3,
-      computadora 8gb ram, pc rápida, equipo computo, pc negocio,
-      punto de venta, pc windows 10, multitarea, cpu, computadora
-      usada garantía, pc económica buena
-  - nombre: Computadora PC CPU Acer Veriton X2610G Core i3 4GB 500GB Win 10
-    precio: 1100 MXN
-    imagen: ""
-    enlace: ""
-    descripcion: PC de Escritorio Acer Veriton X2610G – Ideal para Oficina
-    etiqueta: usado
+      teclado ni mouse
+  - nombre: Computadora PC CPU Acer Veriton X2610G
+    precio: $ 1100 MXN
+    imagen: "https://lh3.googleusercontent.com/d/1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g=w1200"
+    enlace: "https://articulo.mercadolibre.com.mx/MLM-3130890755-pc-acer-x2610g-_JM?matt_tool=17030900&ua=crjX4JH3B7wIHnFWkyy5a33zoBcfUKidiJungBOR_4N16b8#origin=share&sid=share&action=copy"
+    descripcion: "ESPECIFICACIONES:"
+    etiqueta: ""
+    marca: Acer
+    modelo: Veriton X2610G
+    condicion: usado
     detalles: |-
-      🖥️ PC de Escritorio Acer Veriton X2610G – Ideal para Oficina
-      🛡️ Garantía 30 días | ✅ Funcionando al 100%
-      Disponible por mercado libre
       🔧 ESPECIFICACIONES:
       • Marca: Acer
       • Modelo: Veriton X2610G
@@ -85,28 +48,4 @@ articulos:
       • Estado: Usado – Buen estado
       ✅ INCLUYE: CPU (gabinete) con Windows 10 instalado
       ❌ NO INCLUYE: Cable de corriente, cable VGA, monitor,
-         teclado ni mouse
-      💡 IDEAL PARA:
-      ✔ Oficina / recepción
-      ✔ Punto de venta (TPV)
-      ✔ Tareas escolares y administrativas
-      ✔ Navegación web y correo electrónico
-      ✔ Paquetería Office / Google Docs
-      💰 $1100 MXN – acepto ofertas razonables
-      📩 Escríbeme por Messenger, respondo rápido
-      ━━━━━━━━━━━━━━━━━━━━━━
-      📍 ENTREGO EN PERSONA (sin costo extra):
-      🚌 Mexibús L4: UMB → Tulpetlac
-      🚌 Mexibús L1: Cd. Azteca → Industrial
-      🚇 Metro Línea B: Cd. Azteca → Río de los Remedios
-      📦 Central de Abasto
-      ⏰ Acordamos día y hora por Messenger ✔
-      ━━━━━━━━━━━━━━━━━━━━━━
-      👀 También tengo versión con 8GB RAM por $1350
-         ¡Pregúntame!
-      🔎 computadora escritorio, pc oficina, desktop, acer, intel i3,
-      computadora usada, pc barata, equipo computo, pc negocio,
-      punto de venta, computadora escolar, pc windows 10, cpu,
-      computadora garantía, pc económica 
-      Ecatepec de Morelos, Edomex · La ubicación es aproximada
-      Búsquedas relacionadas
+      teclado ni mouse

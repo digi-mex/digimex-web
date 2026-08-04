@@ -9,7 +9,7 @@
   dropdown: true
   items:
     - title: "Reparaciones"
-      url: "/galeria-reparaciones/"
+      url: "/#reparaciones"
       icono: "fa-screwdriver-wrench"
     - title: "Licencias Office"
       url: "/licencias-office/"

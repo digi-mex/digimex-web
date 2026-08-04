@@ -9,7 +9,7 @@ categories: digimex
 
 Aquí encontrarás todo lo que hacemos:
 
-- **Reparación de PC y laptop a nivel componente**: diagnóstico preciso y reparaciones de equipo para que tu computadora vuelva al máximo rendimiento. Explora nuestra [galería de servicios](/galeria-reparaciones/).
+- **Reparación de PC y laptop**: diagnóstico preciso y reparaciones de equipo para que tu computadora vuelva al máximo rendimiento. Explora nuestra [galería de servicios](/galeria-reparaciones/).
 - **Licencias de Microsoft Office**: Microsoft 365 y Office 2024, 100% originales, con instalación incluida y soporte. [Cótizalas aquí](/licencias-office/).
 - **Diseño de landing pages**: creamos páginas de venta conectadas con Google Analytics, Google Search Console, Facebook, correo, WhatsApp y Google Business Profile. [Conoce el servicio](/servicios-digitales/).
 - **Portafolio**: revisa los [proyectos web que ya hemos realizado](/portafolio-diseno/).

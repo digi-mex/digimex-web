@@ -90,11 +90,6 @@ servicios:
     description: "Renovación de procesadores, tarjetas gráficas y componentes principales."
     image: "/img/reparaciones/img_reparaciones_pc/15.webp"
 
-  - title: "Configuración de BIOS/UEFI"
-    categoria: "software-datos"
-    description: "Ajustes avanzados a nivel firmware para compatibilidad y estabilidad óptima del hardware."
-    image: "/img/reparaciones/img_reparaciones_pc/16.webp"
-
   - title: "Limpieza de Tarjeta Madre"
     categoria: "mantenimiento-limpieza"
     description: "Remoción de impurezas y sulfato en placas de circuito mediante productos especializados."

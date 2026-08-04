@@ -6,13 +6,13 @@ permalink: /aviso-de-privacidad/
 
 <section class="py-16 sm:py-24 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 leading-relaxed">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-8 text-center">Aviso de Privacidad</h1>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-8 text-center">Aviso de Privacidad</h1>
 
         <p class="mb-4">
             <strong>DIGIMEX</strong>, con domicilio en Ciudad de México, México, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
         </p>
 
-        <h2 class="text-2xl font-bold text-blue-700 mt-8 mb-4">¿Para qué fines utilizaremos sus datos personales?</h2>
+        <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">¿Para qué fines utilizaremos sus datos personales?</h2>
         <p class="mb-4">
             Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:
         </p>
@@ -23,7 +23,7 @@ permalink: /aviso-de-privacidad/
             <li>Facturación y cobro.</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-blue-700 mt-8 mb-4">¿Qué datos personales utilizaremos para estos fines?</h2>
+        <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">¿Qué datos personales utilizaremos para estos fines?</h2>
         <p class="mb-4">
             Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:
         </p>
@@ -33,7 +33,7 @@ permalink: /aviso-de-privacidad/
             <li>Teléfono de contacto.</li>
         </ul>
 
-        <h2 class="text-2xl font-bold text-blue-700 mt-8 mb-4">¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso?</h2>
+        <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso?</h2>
         <p class="mb-4">
             Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.
         </p>
@@ -41,7 +41,7 @@ permalink: /aviso-de-privacidad/
             Para el ejercicio de cualquiera de los derechos ARCO, usted deberá presentar la solicitud respectiva enviando un correo electrónico a: <strong>digitalmex@proton.me</strong>.
         </p>
 
-        <h2 class="text-2xl font-bold text-blue-700 mt-8 mb-4">Cambios al Aviso de Privacidad</h2>
+        <h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Cambios al Aviso de Privacidad</h2>
         <p class="mb-4">
             El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.
         </p>

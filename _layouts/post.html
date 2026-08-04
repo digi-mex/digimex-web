@@ -1,23 +1,22 @@
 ---
 layout: default
 ---
-<article class="bg-white py-16 sm:py-24 relative overflow-hidden">
-    <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[140px] pointer-events-none" aria-hidden="true"></div>
+<article class="bg-white py-14 sm:py-16">
     <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <header class="mb-10">
-            <nav class="text-sm text-gray-500 mb-6" aria-label="Ruta de navegación">
-                <a href="{{ '/blog/' | relative_url }}" class="hover:text-blue-600 transition-colors inline-flex items-center gap-2">
+            <nav class="text-sm text-slate-500 mb-6" aria-label="Ruta de navegación">
+                <a href="{{ '/blog/' | relative_url }}" class="hover:text-slate-700 transition-colors inline-flex items-center gap-2">
                     <i class="fas fa-arrow-left text-xs"></i> Volver al blog
                 </a>
             </nav>
             {% if post.categories %}
-            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-5">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-600 bg-slate-100 border border-slate-200 rounded-full px-4 py-1.5 mb-5">
                 <i class="fas fa-newspaper"></i> {{ page.categories | first }}
             </span>
             {% endif %}
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 leading-tight">{{ page.title }}</h1>
-            <div class="flex items-center gap-3 text-sm text-gray-500">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">{{ page.title }}</h1>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500">
                 {% assign mes_n = page.date | date: "%-m" | plus: 0 %}
                 {% assign mes = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
                 {% assign mes_idx = mes_n | minus: 1 %}
@@ -29,7 +28,7 @@ layout: default
         </header>
 
         {% if page.image and page.image != "" %}
-        <div class="rounded-3xl overflow-hidden border border-gray-200 mb-10 aspect-[16/8]">
+        <div class="rounded-2xl overflow-hidden border border-slate-200 mb-10 aspect-[16/8]">
             <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-full object-cover" loading="eager">
         </div>
         {% endif %}
@@ -38,11 +37,11 @@ layout: default
             {{ content }}
         </div>
 
-        <div class="mt-14 pt-8 border-t border-gray-200 flex items-center justify-between">
-            <a href="{{ '/blog/' | relative_url }}" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-800 transition-colors">
+        <div class="mt-14 pt-8 border-t border-slate-200 flex items-center justify-between">
+            <a href="{{ '/blog/' | relative_url }}" class="inline-flex items-center gap-2 text-slate-700 font-semibold hover:text-slate-900 transition-colors">
                 <i class="fas fa-arrow-left text-xs"></i> Todos los artículos
             </a>
-            <a href="https://m.me/d1g1mex" target="_blank" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl transition-colors duration-300">
+            <a href="https://m.me/d1g1mex" target="_blank" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-xl transition-colors duration-300">
                 <i class="fab fa-facebook-messenger"></i> Escríbenos
             </a>
         </div>

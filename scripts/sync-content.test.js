@@ -9,6 +9,9 @@ const {
   buildPostMarkdown,
   decodeHTML,
   parseDocHTML,
+  isImageUrl,
+  googleDriveId,
+  toImageUrl,
 } = require('../scripts/sync-content');
 
 // --- CSV ---
@@ -99,5 +102,13 @@ assert.strictEqual(blocks[2].images.length, 0, 'tercera sin imagen');
 // --- Markdown del post incluye la imagen ---
 const mdImg = buildPostMarkdown({ title: 'Con imagen', date: '2026-08-03', category: 'Blog', image: '/assets/img/blog/con-imagen.png' });
 assert.ok(mdImg.includes('image: /assets/img/blog/con-imagen.png'), 'incluye image');
+
+// --- Google Drive como imagen ---
+assert.strictEqual(googleDriveId('https://drive.google.com/file/d/1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g/view?usp=drive_link'), '1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g');
+assert.strictEqual(googleDriveId('https://drive.google.com/uc?id=ABC123'), 'ABC123');
+assert.strictEqual(googleDriveId('https://example.com/no-drive.jpg'), '');
+assert.ok(isImageUrl('https://drive.google.com/file/d/1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g/view?usp=drive_link'), 'drive file = imagen');
+assert.strictEqual(toImageUrl('https://drive.google.com/file/d/ABC123/view'), 'https://lh3.googleusercontent.com/d/ABC123=w1200');
+assert.strictEqual(toImageUrl('https://x.com/foto.jpg'), 'https://x.com/foto.jpg');
 
 console.log('OK: todas las pruebas pasaron.');
