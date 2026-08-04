@@ -247,7 +247,13 @@ async function syncTienda() {
         else if (/…|\.\.\./.test(value)) { /* imagen truncada o rota: se ignora */ }
         else if (/^https?:\/\//i.test(value)) articulo.enlace = value;
       }
-      if (key === 'enlace' && !articulo.enlace && /^https?:\/\//i.test(value)) articulo.enlace = value;
+      if (key === 'enlace' && /^https?:\/\//i.test(value)) {
+        if (isImageUrl(value)) {
+          if (!articulo.imagen) articulo.imagen = value;
+        } else if (!/…|\.\.\./.test(value) && !articulo.enlace) {
+          articulo.enlace = value;
+        }
+      }
       if (key === 'descripcion') {
         articulo.detalles = value;
         articulo.descripcion = firstParagraph(value);
@@ -323,11 +329,11 @@ function parseDocPosts(text) {
 
     // La fecha en el documento (si viene en español) se normaliza a YYYY-MM-DD.
     const parsedDate = parseDate(date);
-    if (!parsedDate) date = new Date().toISOString().slice(0, 10);
+    if (!parsedDate) date = todayLocalISO();
 
     return {
       title: title || 'Sin título',
-      date: parsedDate || new Date().toISOString().slice(0, 10),
+      date: parsedDate || todayLocalISO(),
       category: category || 'Blog',
       autor,
       content,
@@ -335,6 +341,12 @@ function parseDocPosts(text) {
   });
 
   return posts;
+}
+
+// Fecha local en formato YYYY-MM-DD (sin desfase por zona horaria).
+function todayLocalISO() {
+  const d = new Date();
+  return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
 }
 
 function parseDate(str) {
@@ -353,6 +365,73 @@ function parseDate(str) {
   return null;
 }
 
+// ---------------------------------------------------------------------------
+// Blog: imágenes embebidas en el documento (export HTML)
+// ---------------------------------------------------------------------------
+
+const HTML_ENTITIES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
+  aacute: 'á', eacute: 'é', iacute: 'í', oacute: 'ó', uacute: 'ú',
+  Aacute: 'Á', Eacute: 'É', Iacute: 'Í', Oacute: 'Ó', Uacute: 'Ú',
+  ntilde: 'ñ', Ntilde: 'Ñ', uuml: 'ü', Uuml: 'Ü', auml: 'ä', Auml: 'Ä',
+  ouml: 'ö', Ouml: 'Ö', euml: 'ë', Euml: 'Ë', iuml: 'ï', Iuml: 'Ï',
+  agrave: 'à', Agrave: 'À', egrave: 'è', Egrave: 'È', igrave: 'ì',
+  Igrave: 'Ì', ograve: 'ò', Ograve: 'Ò', ugrave: 'ù', Ugrave: 'Ù',
+  ccedil: 'ç', Ccedil: 'Ç', middot: '·', bull: '•', hellip: '…',
+  ndash: '–', mdash: '—', lsquo: '‘', rsquo: '’', ldquo: '“', rdquo: '”',
+  reg: '®', copy: '©', trade: '™', deg: '°', plusmn: '±', times: '×',
+  divide: '÷', micro: 'µ', frac12: '½', frac14: '¼', frac34: '¾',
+};
+
+function decodeHTML(text) {
+  return String(text)
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&([a-z]+);/gi, (m, n) => (HTML_ENTITIES[n] !== undefined ? HTML_ENTITIES[n] : m));
+}
+
+// Divide el HTML del documento en bloques (una entrada por bloque) y extrae
+// las imágenes de cada uno. El separador entre entradas es una línea de
+// guiones o una regla horizontal.
+function parseDocHTML(html) {
+  const body = String(html).slice(html.indexOf('<body'), html.lastIndexOf('</body>') + 7);
+  const cleaned = body.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+  const marked = cleaned
+    .replace(/<hr[^>]*>/gi, '\n[[SEP]]\n')
+    .replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, (m, inner) => {
+      const text = inner.replace(/<[^>]+>/g, '').trim();
+      return /^-{3,}$/.test(text) ? '\n[[SEP]]\n' : m;
+    });
+  return marked
+    .split('[[SEP]]')
+    .map((block) => block.trim())
+    .filter(Boolean)
+    .map((block) => {
+      const images = [];
+      const re = /<img[^>]*src="([^"]+)"/gi;
+      let m;
+      while ((m = re.exec(block))) images.push(decodeHTML(m[1]));
+      return { images };
+    });
+}
+
+// Guarda la primera imagen de una entrada (data URI o URL) y devuelve la ruta
+// relativa del sitio para usarla en el front matter `image`.
+function saveBlogImage(slug, src) {
+  const m = /^data:image\/([a-z0-9]+);base64,([\s\S]+)$/i.exec(src);
+  if (m) {
+    let ext = m[1].toLowerCase();
+    if (ext === 'jpeg') ext = 'jpg';
+    const dir = path.join(ROOT, 'assets', 'img', 'blog');
+    fs.mkdirSync(dir, { recursive: true });
+    const fname = `${slug}.${ext}`;
+    fs.writeFileSync(path.join(dir, fname), Buffer.from(m[2].replace(/\s+/g, ''), 'base64'));
+    return `/assets/img/blog/${fname}`;
+  }
+  if (/^https?:\/\//i.test(src)) return src;
+  return '';
+}
+
 function buildPostMarkdown(post) {
   const fm = [
     '---',
@@ -361,6 +440,7 @@ function buildPostMarkdown(post) {
     `date: ${post.date}`,
     `categories: ${post.category}`,
     post.autor ? `autor: "${post.autor.replace(/"/g, '\\"')}"` : null,
+    post.image ? `image: ${yamlString(post.image)}` : null,
     '---',
     '',
     post.content,
@@ -373,11 +453,21 @@ function buildPostMarkdown(post) {
 
 async function syncBlog() {
   const url = `https://docs.google.com/document/d/${CONFIG.blogDocId}/export?format=txt`;
-  const txt = await fetchText(url);
+  const htmlUrl = `https://docs.google.com/document/d/${CONFIG.blogDocId}/export?format=html`;
+  const [txt, html] = await Promise.all([fetchText(url), fetchText(htmlUrl)]);
   const posts = parseDocPosts(txt);
   if (posts.length === 0) {
     console.warn('  [blog] No se encontraron entradas en el documento.');
     return;
+  }
+
+  // Asocia a cada entrada la primera imagen de su bloque en el HTML (por orden).
+  const blocks = parseDocHTML(html);
+  for (let i = 0; i < posts.length; i++) {
+    const block = blocks[i];
+    if (block && block.images.length) {
+      posts[i].image = saveBlogImage(slugify(posts[i].title), block.images[0]);
+    }
   }
 
   const postsDir = path.join(ROOT, CONFIG.postsDir);
@@ -390,7 +480,7 @@ async function syncBlog() {
     const fname = `${post.date}-${slug}.md`;
     fs.writeFileSync(path.join(postsDir, fname), buildPostMarkdown(post), 'utf8');
     written++;
-    console.log(`  [blog] ${fname}`);
+    console.log(`  [blog] ${fname}${post.image ? ` (imagen: ${post.image})` : ''}`);
   }
 
   // Elimina posts generados que ya no existan en el documento (prefijo generado).
@@ -399,6 +489,18 @@ async function syncBlog() {
     if (/^\d{4}-\d{2}-\d{2}-.+\.md$/.test(f) && !generated.has(f)) {
       fs.unlinkSync(path.join(postsDir, f));
       console.log(`  [blog] elimina ${f}`);
+    }
+  }
+
+  // Elimina imágenes de blog huérfanas (cuya entrada ya no existe).
+  const imageDir = path.join(ROOT, 'assets', 'img', 'blog');
+  if (fs.existsSync(imageDir)) {
+    const slugs = new Set(posts.map((p) => slugify(p.title)));
+    for (const f of fs.readdirSync(imageDir)) {
+      if (!slugs.has(f.replace(/\.(png|jpe?g|gif|webp|avif)$/i, ''))) {
+        fs.unlinkSync(path.join(imageDir, f));
+        console.log(`  [blog] elimina imagen ${f}`);
+      }
     }
   }
   console.log(`  [blog] ${written} entradas -> ${CONFIG.postsDir}`);
@@ -454,7 +556,11 @@ module.exports = {
   slugify,
   parseDocPosts,
   parseDate,
+  todayLocalISO,
   buildPostMarkdown,
+  decodeHTML,
+  parseDocHTML,
+  saveBlogImage,
   syncTienda,
   syncBlog,
 };

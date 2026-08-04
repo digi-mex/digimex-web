@@ -28,7 +28,7 @@ layout: default
             </div>
         </header>
 
-        {% if page.image %}
+        {% if page.image and page.image != "" %}
         <div class="rounded-3xl overflow-hidden border border-gray-200 mb-10 aspect-[16/8]">
             <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="w-full h-full object-cover" loading="eager">
         </div>

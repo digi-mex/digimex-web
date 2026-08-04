@@ -3,6 +3,7 @@ layout: post
 title: "Guía de Mantenimiento para PC"
 date: 2026-08-03
 categories: Blog
+image: /assets/img/blog/guia-de-mantenimiento-para-pc.png
 ---
 
 Mantener tu computadora en óptimas condiciones garantiza un mejor rendimiento, alarga la vida útil de sus componentes y evita fallas inesperadas. El mantenimiento se divide principalmente en dos áreas: preventivo (físico y lógico) y correctivo.

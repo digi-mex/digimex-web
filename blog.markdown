@@ -24,7 +24,7 @@ permalink: /blog/
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for post in site.posts %}
             <article class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl hover:shadow-blue-100 hover:border-blue-300 transition-all duration-300 flex flex-col">
-                {% if post.image %}
+                {% if post.image and post.image != "" %}
                 <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
                 {% else %}
                 <div class="w-full h-48 bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center text-blue-400">

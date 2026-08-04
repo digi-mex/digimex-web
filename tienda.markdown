@@ -36,7 +36,7 @@ permalink: /tienda/
             {% for a in articulos %}
             {% assign msg = 'Hola, me interesa: ' | append: a.nombre | url_encode %}
             <article class="group bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col">
-                {% if a.imagen %}
+                {% if a.imagen and a.imagen != "" %}
                 <div class="relative aspect-[4/3] overflow-hidden bg-blue-50">
                     <img src="{{ a.imagen | relative_url }}" alt="{{ a.nombre }}" loading="lazy"
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">

@@ -5,7 +5,10 @@ const {
   buildTiendaYAML,
   parseDocPosts,
   parseDate,
+  todayLocalISO,
   buildPostMarkdown,
+  decodeHTML,
+  parseDocHTML,
 } = require('../scripts/sync-content');
 
 // --- CSV ---
@@ -65,9 +68,36 @@ assert.ok(md.includes('title: "Cómo mantener tu laptop"'));
 assert.ok(md.includes('date: 2026-03-20'));
 assert.ok(md.includes('categories: Tecnología'));
 
-// --- Post sin fecha: usa fecha de hoy ---
-const hoy = new Date().toISOString().slice(0, 10);
+// --- Post sin fecha: usa fecha de hoy (local) ---
+const hoy = todayLocalISO();
 const doc2 = '# Solo un título\n\nContenido sin fecha.\n';
 assert.strictEqual(parseDocPosts(doc2)[0].date, hoy);
+assert.strictEqual(parseDate(''), null, 'fecha vacía -> null');
+
+// --- HTML: entidades y bloques ---
+assert.strictEqual(decodeHTML('Gu&iacute;a &amp; m&aacute;s &#250;til'), 'Guía & más útil');
+assert.strictEqual(decodeHTML('&#x1F4BB;'), '💻');
+
+const htmlDoc = '<html><body>' +
+  '<style>.c1{}</style>' +
+  '<h2><span>Primera entrada</span></h2>' +
+  '<p>Contenido uno.</p>' +
+  '<img src="data:image/png;base64,AAAA" />' +
+  '<hr>' +
+  '<h2><span>Segunda entrada</span></h2>' +
+  '<p>Contenido dos.</p>' +
+  '<p><span>---</span></p>' +
+  '<h2><span>Tercera entrada</span></h2>' +
+  '</body></html>';
+const blocks = parseDocHTML(htmlDoc);
+assert.strictEqual(blocks.length, 3, 'tres bloques');
+assert.strictEqual(blocks[0].images.length, 1, 'primera con imagen');
+assert.ok(blocks[0].images[0].startsWith('data:image/png;base64,'), 'data uri');
+assert.strictEqual(blocks[1].images.length, 0, 'segunda sin imagen');
+assert.strictEqual(blocks[2].images.length, 0, 'tercera sin imagen');
+
+// --- Markdown del post incluye la imagen ---
+const mdImg = buildPostMarkdown({ title: 'Con imagen', date: '2026-08-03', category: 'Blog', image: '/assets/img/blog/con-imagen.png' });
+assert.ok(mdImg.includes('image: /assets/img/blog/con-imagen.png'), 'incluye image');
 
 console.log('OK: todas las pruebas pasaron.');
