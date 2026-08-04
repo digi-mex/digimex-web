@@ -6,6 +6,8 @@ keywords: "licencia office, office 2019, office 2024, comprar office, licencia o
 permalink: /licencias-office/
 ---
 
+<link rel="preload" as="image" href="{{ '/img/office/office-2024.jpg' | relative_url }}">
+
 <!-- ============================================================
      HERO — LICENCIAS OFFICE
      ============================================================ -->
@@ -48,19 +50,19 @@ permalink: /licencias-office/
         </div>
 
         <!-- Imágenes de producto -->
-        <div class="relative flex justify-center items-end gap-6 sm:gap-10 py-8">
+        <div class="relative flex justify-center items-end gap-3 sm:gap-10 py-8">
             <!-- Office 2019 -->
-            <div class="w-44 sm:w-56 transition-transform duration-300 hover:-translate-y-2 hover:scale-105">
+            <div class="w-32 sm:w-56 transition-transform duration-300 hover:-translate-y-2 hover:scale-105">
                 <img src="{{ '/img/office/office-2019.webp' | relative_url }}" alt="Microsoft Office 2019 Pro Plus"
-                     class="w-full h-auto drop-shadow-2xl rounded-2xl" loading="eager">
+                     class="w-full h-auto drop-shadow-2xl rounded-2xl" loading="eager" width="480" height="576">
             </div>
             <!-- Office 2024 (destacado) -->
-            <div class="relative w-48 sm:w-64 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 z-10">
+            <div class="relative w-36 sm:w-64 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 z-10">
                 <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white bg-blue-600 rounded-full px-3 py-1.5 shadow-lg z-20 whitespace-nowrap">
                     Más vendido
                 </span>
                 <img src="{{ '/img/office/office-2024.jpg' | relative_url }}" alt="Microsoft Office 2024 Pro Plus"
-                     class="w-full h-auto drop-shadow-2xl rounded-2xl" loading="eager">
+                     class="w-full h-auto drop-shadow-2xl rounded-2xl" loading="eager" width="554" height="554">
             </div>
         </div>
         <!-- Sello de confianza -->
@@ -104,10 +106,10 @@ permalink: /licencias-office/
                 <div class="shrink-0 w-32 sm:w-36 flex items-center justify-center bg-slate-50 rounded-2xl p-3">
                     {% if licencia.nombre contains "2019" %}
                     <img src="{{ '/img/office/office-2019.webp' | relative_url }}" alt="{{ licencia.nombre }}"
-                         class="w-full h-auto rounded-xl drop-shadow-md">
+                         class="w-full h-auto rounded-xl drop-shadow-md" loading="lazy" width="480" height="576">
                     {% else %}
                     <img src="{{ '/img/office/office-2024.jpg' | relative_url }}" alt="{{ licencia.nombre }}"
-                         class="w-full h-auto rounded-xl drop-shadow-md">
+                         class="w-full h-auto rounded-xl drop-shadow-md" loading="lazy" width="554" height="554">
                     {% endif %}
                 </div>
 
@@ -159,7 +161,8 @@ permalink: /licencias-office/
         </div>
 
         <div class="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm">
-            <table class="w-full text-sm text-left">
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left min-w-[600px]">
                 <thead>
                     <tr class="border-b border-gray-200 bg-gray-50/70">
                         <th class="py-5 px-6 font-bold text-slate-500"></th>
@@ -195,6 +198,7 @@ permalink: /licencias-office/
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
 
         <p class="text-center text-sm text-gray-500 mt-6">

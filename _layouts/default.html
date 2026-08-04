@@ -9,13 +9,20 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
 
             <!-- Fila Única: Logo (Izquierda) + Buscador (Centro) + Menú (Derecha) -->
-            <div class="flex items-center w-full">
+            <div class="flex items-center justify-between w-full">
 
                 <!-- Logo -->
-                <a href="{{ '/' | relative_url }}" class="text-xl font-extrabold logo-font group shrink-0 py-2">
-                    <span class="text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
-                        < /</span> <span class="logo-gradient">DIGIMEX</span> <span
+                <a href="{{ '/' | relative_url }}" class="flex items-center gap-2.5 shrink-0 py-1">
+                    <!-- Logo circular (móvil) -->
+                    <img src="{{ '/img/digimex.jpg' | relative_url }}" alt="DIGIMEX"
+                         class="md:hidden w-11 h-11 rounded-full object-cover border-2 border-blue-200 shadow-md shadow-blue-100"
+                         width="44" height="44" loading="eager">
+                    <!-- Logo de texto (desktop) -->
+                    <span class="hidden md:inline text-xl font-extrabold logo-font group py-2">
+                        <span class="text-blue-600 group-hover:text-blue-700 transition-colors duration-300">
+                            < /</span> <span class="logo-gradient">DIGIMEX</span> <span
                                 class="text-blue-600 group-hover:text-blue-700 transition-colors duration-300">></span>
+                    </span>
                 </a>
 
                 <!-- Barra de Búsqueda (centro, solo md+) -->

@@ -8,7 +8,8 @@
     "build:js": "npx terser assets/js/script.js -o assets/js/script.min.js -c -m",
     "build": "npm run build:css && npm run build:js",
     "watch": "npx tailwindcss -i ./src/input.css -o ./assets/css/main.css --watch",
-    "sync": "node scripts/sync-content.js"
+    "sync": "node scripts/sync-content.js",
+    "lighthouse": "lighthouse $URL --form-factor=mobile --only-categories=performance,accessibility,best-practices,seo --output=html --output-path=./lighthouse-report.html --chrome-flags=\"--headless --no-sandbox --disable-gpu\""
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
     "cssnano": "^6.0.1",
     "imagemin": "^9.0.1",
     "imagemin-webp": "^8.0.0",
+    "lighthouse": "^11.7.1",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "terser": "^5.44.1"
