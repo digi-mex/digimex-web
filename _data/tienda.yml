@@ -4,7 +4,7 @@
 #
 # Campos de cada artículo: nombre, precio, imagen, enlace, descripcion, detalles, etiqueta, marca, modelo, condicion.
 articulos:
-  - nombre: Computadora PC  Acer Veriton X2631G Core i3
+  - nombre: PC  Acer Veriton X2631G
     precio: $ 1350 MXN
     imagen: "https://lh3.googleusercontent.com/d/1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g=w1200"
     enlace: "https://articulo.mercadolibre.com.mx/MLM-3125028003-pc-acer-x2631g-_JM?matt_tool=17030900&ua=P5QlGrJuyYFM6FAvqjpU-S6I_0R76kqKNhFHy1woEJ2fkzc#origin=share&sid=share&action=copy"
@@ -27,7 +27,7 @@ articulos:
       ✅ INCLUYE: CPU (gabinete) con Windows 10 instalado
       ❌ NO INCLUYE: Cable de corriente, cable VGA, monitor,
       teclado ni mouse
-  - nombre: Computadora PC CPU Acer Veriton X2610G
+  - nombre: PC Acer Veriton X2610G
     precio: $ 1100 MXN
     imagen: "https://lh3.googleusercontent.com/d/1-nzbP5Z5E26brYflvXQyhJPfBuR76T2g=w1200"
     enlace: "https://articulo.mercadolibre.com.mx/MLM-3130890755-pc-acer-x2610g-_JM?matt_tool=17030900&ua=crjX4JH3B7wIHnFWkyy5a33zoBcfUKidiJungBOR_4N16b8#origin=share&sid=share&action=copy"
