@@ -1,0 +1,80 @@
+---
+layout: none
+noindex: true
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🛑 SEGURIDAD: Evita que Google indexe esta página -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <title>Demo del Sitio Web</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 { color: #0056b3; }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Textos que se llenarán automáticamente con JavaScript -->
+        <h1 id="titulo-cliente">Cargando demostración...</h1>
+        <h3 id="subtitulo-oficio"></h3>
+        
+        <p>Esta es una demostración de cómo se vería una página web profesional para atraer más clientes.</p>
+        
+        <!-- Botón para que te contacten de vuelta -->
+        <a href="https://wa.me/525555555555" class="btn">Me interesa, hablemos</a>
+    </div>
+
+    <!-- ⚙️ SCRIPT PARA LEER LOS DATOS -->
+    <script>
+        // Buscamos los parámetros en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombreCliente = urlParams.get('cliente');
+        const oficioCliente = urlParams.get('oficio');
+
+        if (nombreCliente || oficioCliente) {
+            // Inyectamos los textos en el HTML
+            document.getElementById('titulo-cliente').innerText = "Sitio Oficial de " + (nombreCliente || "Tu Negocio");
+            document.getElementById('subtitulo-oficio').innerText = "Expertos en " + (oficioCliente || "Tus Servicios");
+            
+            // Cambiar el título de la pestaña del navegador
+            if (nombreCliente) document.title = "Demo - " + nombreCliente;
+        } else {
+            // Si entran a demo.html sin parámetros
+            document.getElementById('titulo-cliente').innerText = "Bienvenido a nuestra página de Demos";
+            document.getElementById('subtitulo-oficio').innerText = "Contacta con un asesor para generar tu demo";
+        }
+    </script>
+
+</body>
+</html>

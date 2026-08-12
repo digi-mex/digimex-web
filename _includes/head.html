@@ -2,6 +2,10 @@
     {% include seo/google-tag-manager.html %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.layout == 'post' or page.noindex %}
+    <!-- 🛑 SEGURIDAD: Evita que Google indexe los artículos o demos -->
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:; frame-src 'self' https://www.google.com https://www.facebook.com;">
