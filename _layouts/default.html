@@ -4,6 +4,16 @@
 
 <body class="antialiased">
 
+    <script>
+        // Si vienen con ?cliente= o ?oficio=, mostrar la demo del sitio (demo.html)
+        (function () {
+            const q = new URLSearchParams(window.location.search);
+            if (q.get('cliente') || q.get('oficio')) {
+                location.replace('demo.html' + window.location.search);
+            }
+        })();
+    </script>
+
     <!-- Navbar (Header) -->
     <header class="sticky top-0 z-50 header-nav">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
