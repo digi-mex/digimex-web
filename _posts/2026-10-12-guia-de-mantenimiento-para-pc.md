@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Guía de Mantenimiento para PC"
-date: 2026-10-11
+date: 2026-10-12
 categories: Blog
 image: /assets/img/blog/guia-de-mantenimiento-para-pc.png
 ---
